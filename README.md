@@ -71,7 +71,7 @@ change during a session. See [storage and recovery](docs/OPERATIONS.md).
 
 | Feature | Status | Tested behavior / remaining work |
 | :--- | :---: | :--- |
-| Display output | ✅ | Visible without blinking after the frame-fence fix |
+| Display | ✅ | Display working |
 | Display configuration | ✅ | 1440 × 3168 at 600 dpi; portrait status bar clears the rounded corners |
 | Touch & gesture input | ✅ | Touch, gesture navigation, and smooth transitions work |
 | Wi-Fi & internet | ✅ | Connected network with Android-validated internet access |
