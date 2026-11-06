@@ -30,7 +30,6 @@ reusing the running stock kernel and selected hardware services.
 
 The name expands to **Open Origin OS**. This project is a community experiment;
 it does not contain OriginOS source code and is not affiliated with vivo or iQOO.
-The approach was inspired by [OneLineage](https://github.com/WeWaffles/OneLineage).
 
 ### At a glance
 
@@ -69,13 +68,9 @@ not imply that every use case or the latest build has passed a full regression t
 
 | Feature | Status | Tested behavior / remaining work |
 | :--- | :---: | :--- |
-| Home screen | ✅ | Launcher and apps displayed on the phone |
-| Settings & About phone | ✅ | Screens open and device information is populated |
 | Display output | ✅ | Visible without blinking after the frame-fence fix |
-| Resolution & status bar | ✅ | 1440 × 3168 at 600 dpi; portrait clock clears the rounded corners |
-| Gesture navigation & transitions | ⬜ | Configured; smooth cross-app behavior needs verification |
-| Initial setup wizard | ⬜ | Full first-run flow needs verification |
-| APK installation | ✅ | App installation and launch verified |
+| Display configuration | ✅ | 1440 × 3168 at 600 dpi; portrait status bar clears the rounded corners |
+| Touch & gesture input | ⬜ | Touch interaction works; gesture navigation and smooth transitions need verification |
 | Wi-Fi & internet | ✅ | Connected network with Android-validated internet access |
 | Modem detection | ✅ | Baseband and two SIM slots detected |
 | Calls, SMS & mobile data | ⬜ | Active-SIM testing pending |
@@ -86,13 +81,21 @@ not imply that every use case or the latest build has passed a full regression t
 | Bluetooth | ⬜ | Pairing and data transfer need verification |
 | NFC | ⬜ | Transactions need verification |
 | GNSS | ⬜ | A location fix needs verification |
-| Persistent guest data | ✅ | Separate writable 32 GiB image |
-| Downloads & media saving | ❌ | Previous checks failed; storage fixes await retesting |
-| Screen lock | ❌ | Setup failed; latest key-bridge fixes await retesting |
-| Google services | ✅ | Imported apps and services launch |
-| Google sign-in | ❌ | Account login does not complete |
-| Hardware attestation | ❌ | App attestation failed; backend integration needs validation |
+| Persistent storage | ✅ | Separate writable 32 GiB guest data image |
+| Shared storage | ❌ | Downloads and media saving failed; storage fixes await retesting |
+| Credential backend | ❌ | Screen-lock setup failed; latest key-bridge fixes await retesting |
+| Hardware-backed keys & attestation | ❌ | App attestation failed; backend integration needs validation |
 | Audio | ⬜ | Untested |
+
+| Operating mode | Status | Behavior / remaining work |
+| :--- | :---: | :--- |
+| Guest session | ✅ | Android 17 userspace runs on the stock kernel with no fixed session time limit |
+| Return to stock | ✅ | Existing controller stops the guest and restores stock services |
+| Persistent guest data | ✅ | Guest app data is retained between sessions |
+| Reboot to stock | ✅ | Reboot restores the stock boot path; temporary root must be set up again |
+| On-device switching | ⬜ | Switcher app and phone-side controller are in development |
+
+Google services launch, but Google account sign-in currently does not complete.
 
 ## Compatibility
 
@@ -156,7 +159,7 @@ using the device commands, reset, or removal.
 
 ## Next milestones
 
-- [x] Display a usable GSI home screen and Settings on the physical phone
+- [x] Drive the physical display from the guest Android framework
 - [x] Bridge initial hardware services and persist guest data
 - [x] Separate source from device images and private session data
 - [ ] Validate unlock, shared storage, downloads, and Google sign-in after the latest fixes
@@ -166,8 +169,7 @@ using the device commands, reset, or removal.
 
 ## Credits and contributions
 
-[OneLineage](https://github.com/WeWaffles/OneLineage) sparked the experiment.
-The runtime also relies on Android/AOSP, the stock vivo/Qualcomm stack,
+The runtime relies on Android/AOSP, the stock vivo/Qualcomm stack,
 [libgbinder](https://github.com/mer-hybris/libgbinder),
 [libglibutil](https://github.com/sailfishos/libglibutil), Zig, BusyBox, and Magisk tools.
 Dependencies retain their upstream licenses; their binaries are not bundled here.
