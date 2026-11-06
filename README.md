@@ -70,7 +70,7 @@ not imply that every use case or the latest build has passed a full regression t
 | :--- | :---: | :--- |
 | Display output | ✅ | Visible without blinking after the frame-fence fix |
 | Display configuration | ✅ | 1440 × 3168 at 600 dpi; portrait status bar clears the rounded corners |
-| Touch & gesture input | ⬜ | Touch interaction works; gesture navigation and smooth transitions need verification |
+| Touch & gesture input | ✅ | Touch, gesture navigation, and smooth transitions work |
 | Wi-Fi & internet | ✅ | Connected network with Android-validated internet access |
 | Modem detection | ✅ | Baseband and two SIM slots detected |
 | Calls, SMS & mobile data | ⬜ | Active-SIM testing pending |
@@ -82,9 +82,9 @@ not imply that every use case or the latest build has passed a full regression t
 | NFC | ⬜ | Transactions need verification |
 | GNSS | ⬜ | A location fix needs verification |
 | Persistent storage | ✅ | Separate writable 32 GiB guest data image |
-| Shared storage | ❌ | Downloads and media saving failed; storage fixes await retesting |
+| Shared storage | ✅ | Downloads and media saving work |
 | Credential backend | ❌ | Screen-lock setup failed; latest key-bridge fixes await retesting |
-| Hardware-backed keys & attestation | ❌ | App attestation failed; backend integration needs validation |
+| Hardware-backed keys & attestation | ✅ | Hardware-backed key generation and app attestation work |
 | Audio | ⬜ | Untested |
 
 | Operating mode | Status | Behavior / remaining work |
@@ -162,8 +162,8 @@ using the device commands, reset, or removal.
 - [x] Drive the physical display from the guest Android framework
 - [x] Bridge initial hardware services and persist guest data
 - [x] Separate source from device images and private session data
-- [ ] Validate unlock, shared storage, downloads, and Google sign-in after the latest fixes
-- [ ] Verify app hardware attestation and remaining hardware features
+- [x] Validate shared storage, downloads, and app hardware attestation
+- [ ] Validate screen lock, Google sign-in, and remaining hardware features
 - [ ] Make the full dependency/build process reproducible from a clean checkout
 - [ ] Publish a clean image separately, with checksums and matching version information
 
