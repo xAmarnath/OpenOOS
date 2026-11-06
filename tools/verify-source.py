@@ -9,6 +9,12 @@ import sys
 
 ROOT = Path(__file__).resolve().parents[1]
 MANIFEST = ROOT / 'source-manifest.json'
+SCREENSHOTS = {
+    'docs/images/about-phone.png',
+    'docs/images/android-version.png',
+    'docs/images/home-screen.png',
+    'docs/images/quick-settings.png',
+}
 
 
 def main():
@@ -33,6 +39,18 @@ def main():
         total += len(data)
         if len(data) != metadata['bytes'] or hashlib.sha256(data).hexdigest() != metadata['sha256']:
             errors.append('Source differs from reviewed snapshot: ' + name)
+        if name in SCREENSHOTS:
+            # Only these reviewed documentation images may contain binary data.
+            valid_png = (
+                45 <= len(data) <= 1024 * 1024
+                and data[:16] == b'\x89PNG\r\n\x1a\n\x00\x00\x00\rIHDR'
+                and int.from_bytes(data[16:20], 'big') == 720
+                and int.from_bytes(data[20:24], 'big') == 1584
+                and data[-12:] == b'\x00\x00\x00\x00IEND\xaeB`\x82'
+            )
+            if not valid_png:
+                errors.append('Invalid documentation screenshot: ' + name)
+            continue
         if len(data) > 1024 * 1024 or b'\x00' in data:
             errors.append('Unexpected binary or large source: ' + name)
             continue

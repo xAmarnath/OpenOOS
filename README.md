@@ -38,6 +38,16 @@ it does not contain OriginOS source code and is not affiliated with vivo or iQOO
 - **Hardware comes through the host.** Binder bridges connect selected guest services to the stock vendor stack.
 - **Guest data survives.** A reboot returns to stock and clears this temporary-root session; guest files remain until removed.
 
+## Screenshots
+
+Captured on the iQOO 13 running the Android 17 guest. Personal identifiers are masked.
+
+| About phone | Version info |
+| :---: | :---: |
+| [![About phone: I2401, Android 17, identifiers masked](docs/images/about-phone.png)](docs/images/about-phone.png) | [![Android 17 version, baseband, kernel, and build information](docs/images/android-version.png)](docs/images/android-version.png) |
+| **Home screen** | **Quick Settings** |
+| [![Guest home screen with installed apps](docs/images/home-screen.png)](docs/images/home-screen.png) | [![Expanded Quick Settings with brightness and device controls](docs/images/quick-settings.png)](docs/images/quick-settings.png) |
+
 ## How it works
 
 ```mermaid
@@ -86,16 +96,6 @@ not imply that every use case or the latest build has passed a full regression t
 | Credential backend | ❌ | Screen-lock setup failed; latest key-bridge fixes await retesting |
 | Hardware-backed keys & attestation | ✅ | Hardware-backed key generation and app attestation work |
 | Audio | ⬜ | Untested |
-
-| Operating mode | Status | Behavior / remaining work |
-| :--- | :---: | :--- |
-| Guest session | ✅ | Android 17 userspace runs on the stock kernel with no fixed session time limit |
-| Return to stock | ✅ | Existing controller stops the guest and restores stock services |
-| Persistent guest data | ✅ | Guest app data is retained between sessions |
-| Reboot to stock | ✅ | Reboot restores the stock boot path; temporary root must be set up again |
-| On-device switching | ⬜ | Switcher app and phone-side controller are in development |
-
-Google services launch, but Google account sign-in currently does not complete.
 
 ## Compatibility
 
@@ -163,7 +163,7 @@ using the device commands, reset, or removal.
 - [x] Bridge initial hardware services and persist guest data
 - [x] Separate source from device images and private session data
 - [x] Validate shared storage, downloads, and app hardware attestation
-- [ ] Validate screen lock, Google sign-in, and remaining hardware features
+- [ ] Validate screen lock and remaining hardware features
 - [ ] Make the full dependency/build process reproducible from a clean checkout
 - [ ] Publish a clean image separately, with checksums and matching version information
 

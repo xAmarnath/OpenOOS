@@ -1,17 +1,17 @@
 {
-  "description": "Reviewed public source snapshot. Excludes this manifest, binaries, images, credentials and private guest data.",
+  "description": "Reviewed public source and redacted documentation screenshots. Excludes this manifest, runtime binaries, disk images, credentials and private guest data.",
   "files": {
     ".gitattributes": {
-      "bytes": 19,
-      "sha256": "d60f352d0db1404c70afb4bb8b2ca3fd1c610572aa40720e8a0b7baa7885418c"
+      "bytes": 44,
+      "sha256": "18748e07ea4138cd0edfae90b8e34464a95a50dcc41ab04e7dd3a612873db8b1"
     },
     ".github/workflows/source-check.yml": {
       "bytes": 361,
       "sha256": "2c4390a1be0e30f06c13c7a2021cdc9ed3ea73eca224e636fa908652972e28be"
     },
     ".gitignore": {
-      "bytes": 1861,
-      "sha256": "c223088029ce73927594b90bf60253c0760c9a2023dd3528ee92db2066487e86"
+      "bytes": 1988,
+      "sha256": "5688a4e15a83f0a8efdac563a2a461dd78ea46f15353881f00b0fd51b6283c15"
     },
     "GuestHomeOverlay.java": {
       "bytes": 3179,
@@ -22,8 +22,8 @@
       "sha256": "75764bb4d01624f08e0cb7e638ae039d2722bb88120ec42d8b033aad01471a3e"
     },
     "README.md": {
-      "bytes": 8813,
-      "sha256": "03aec89ff953d6249a407b8b51a0bf784849be53609d5a78cffa9c8929bb28ee"
+      "bytes": 8850,
+      "sha256": "1168315e318d472538b7d521e29c1a1a0583333f4c138732aa2fb2c4cdae4e05"
     },
     "binder-device.c": {
       "bytes": 588,
@@ -48,6 +48,22 @@
     "docs/OPERATIONS.md": {
       "bytes": 2832,
       "sha256": "79948ce5d592b1830456cf97de0475c2949f0940975ff0ebf00b5c657ddf430b"
+    },
+    "docs/images/about-phone.png": {
+      "bytes": 100116,
+      "sha256": "c68f0d31ef7e3cf5310ed92ab4249dcc1c6ea2abc3015be5b920910c2a447d1a"
+    },
+    "docs/images/android-version.png": {
+      "bytes": 151946,
+      "sha256": "3a3a65d9204ccd2dbf658a9314823d4ff03ab3d1e93e7819b9b01329c6bdcfbb"
+    },
+    "docs/images/home-screen.png": {
+      "bytes": 708937,
+      "sha256": "0fa314f6877512c0b950be87fc97a4be2ca716364a1e294133edc2667f303800"
+    },
+    "docs/images/quick-settings.png": {
+      "bytes": 180231,
+      "sha256": "8547ec9869971a3fee5bdc972b6c66f0bff04328c980cd8c7d550b601e7bc976"
     },
     "docs/runtime-inventory.json": {
       "bytes": 14314,
@@ -262,8 +278,8 @@
       "sha256": "78cb129ff71e07e9183873b4b9b108c9a1cee7c982b798444036b6f24cac8067"
     },
     "tools/verify-source.py": {
-      "bytes": 2975,
-      "sha256": "5cfdedb38b6e85c438bf098521fa821f212ed4ee7f1c422f99519d6a3dc1b2f1"
+      "bytes": 3730,
+      "sha256": "a5de478c24788f484e2584e51634355947398918256a765b24d0b6dda1fadc7a"
     },
     "worker-v3.sh": {
       "bytes": 316,
