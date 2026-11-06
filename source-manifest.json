@@ -14,8 +14,8 @@
       "sha256": "0fbe8c831cbe6540240651e93ba6ebb492c6ab86562979d649c56ad69c6b59b5"
     },
     "GuestHomeOverlay.java": {
-      "bytes": 2396,
-      "sha256": "f494199c4f3422f714491f54756247c5a025ced2a89d17278bc45645f970ebcf"
+      "bytes": 3179,
+      "sha256": "f010c278b275b04d1932303083e9cef53ad81e3e34835acb3c9cf425dcef89db"
     },
     "GuestInputFix.java": {
       "bytes": 1057,
@@ -38,8 +38,8 @@
       "sha256": "f8ebf3d5b8312d33020cf3f11998ae2578638a35918cbd9d3fbf88dab8adf870"
     },
     "docs/DEVELOPMENT.md": {
-      "bytes": 4052,
-      "sha256": "5c5282c103df758b550814d144d346a3d684cf7d880d813e1e62f8b5b7366c03"
+      "bytes": 4529,
+      "sha256": "cbafe701251cc48f552fc0f8314e0b033ada60825959eb26bc888dc55c1fbb35"
     },
     "docs/DISTRIBUTION.md": {
       "bytes": 2346,
@@ -50,8 +50,8 @@
       "sha256": "cd40fb1191e2b574a164009b432e5b52dd54772eae2d151d60a6e6e019043c0b"
     },
     "docs/runtime-inventory.json": {
-      "bytes": 14707,
-      "sha256": "8b8e238add870d110a070af1c7e15750d9a278e13cb7028a8ff2b58f10cfe934"
+      "bytes": 14705,
+      "sha256": "5eabf93aa43c5d212e0cc9bb6b6bb8a727321f4cf1eab90d3afc13be7410ce12"
     },
     "docs/workspace-sizes.json": {
       "bytes": 1477,
@@ -114,8 +114,8 @@
       "sha256": "29e0124b228049693f7549ea19e42de123b255ed84a728fad8d87ef0e855c095"
     },
     "guest-ui-config.sh": {
-      "bytes": 2852,
-      "sha256": "797e0333d0239c0bb4340648cfb91a36fb7af91459a0115ca2a531a04d7d5445"
+      "bytes": 3079,
+      "sha256": "31747aaced4b64f4383830e5023a7e11575c900b3b35e0f3618792f71f293b03"
     },
     "guest_bundle.py": {
       "bytes": 8551,

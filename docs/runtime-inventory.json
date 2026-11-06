@@ -76,10 +76,10 @@
     {
       "path": "user-tests/guest-home-overlay.jar",
       "remote_name": "guest-home-overlay.jar",
-      "bytes": 2385,
-      "sha256": "166d0fd03da3571d3b4b8c21f8b1c867c1516f11bbab59ea562a4fd8987e3c10",
+      "bytes": 2682,
+      "sha256": "992f5e1048467b42d7c4b2c659982ff0587e369e1b61ba70490e43709e18836a",
       "included_source": false,
-      "old_bundle": "unchanged"
+      "old_bundle": "changed"
     },
     {
       "path": "guest-home-overlay.sh",
@@ -188,8 +188,8 @@
     {
       "path": "guest-ui-config.sh",
       "remote_name": "guest-ui-config.sh",
-      "bytes": 2852,
-      "sha256": "797e0333d0239c0bb4340648cfb91a36fb7af91459a0115ca2a531a04d7d5445",
+      "bytes": 3079,
+      "sha256": "31747aaced4b64f4383830e5023a7e11575c900b3b35e0f3618792f71f293b03",
       "included_source": true,
       "old_bundle": "changed"
     },

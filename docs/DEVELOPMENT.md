@@ -43,6 +43,7 @@ python keymint-port/build-compat.py
 python hardware-port/build-java.py hardware-port/GuestBrightness.java hardware-port/guest-brightness.jar
 python hardware-port/build-java.py hardware-port/GuestDataPrepare.java hardware-port/guest-data-prepare.jar
 python hardware-port/build-java.py hardware-port/HaloDaemon.java hardware-port/halo-daemon.jar
+python hardware-port/build-java.py GuestHomeOverlay.java user-tests/guest-home-overlay.jar
 python hardware-port/halo/build.py
 ```
 
@@ -62,6 +63,11 @@ several require external files or additional build recipes.
 - Track guest-created keys and run a separate guest credential verifier.
 - Encode absent KeyMint application ID/data as empty AIDL byte vectors instead
   of null. This latest change still needs end-to-end owner testing.
+- Give the iQOO 13 status bar 24 dp side padding and 4 dp top padding through
+  a guest SystemUI overlay. A brief font-scale refresh applies it to the running
+  view, then restores the startup script's 1.0 scale. The live portrait capture
+  confirmed the clock moved from about 15 px to 90 px from the left edge at
+  600 dpi, without restarting the guest. Landscape remains unverified.
 
 Hardware-backed operations and software guest authentication paths coexist in
 the current bridge. Its presence must not be described as complete hardware

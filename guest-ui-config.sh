@@ -42,6 +42,11 @@ if pm path org.chromium.webview_shell | grep -q '^package:'; then
     pm disable-user --user 0 org.chromium.webview_shell
 fi
 /system/bin/sh /data/local/tmp/guest-home-overlay.sh
+# SystemUI can keep its old view padding after a fabricated overlay update.
+# Refresh that layout, then restore the 1.0 font scale selected above.
+settings put system font_scale 1.001
+sleep 2
+settings put system font_scale 1.0
 # Match stock's working native 120 Hz baseline.
 # These SettingsProvider values belong only to the guest userdata image.
 settings put system min_refresh_rate 120.0

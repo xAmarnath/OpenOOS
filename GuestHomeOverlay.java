@@ -1,16 +1,31 @@
 import java.lang.reflect.*;
 public class GuestHomeOverlay {
-    public static void main(String[] args) { try { go(); } catch(Throwable e) { e.printStackTrace(System.out); } }
+    public static void main(String[] args) {
+        try {
+            if (args.length == 1 && args[0].equals("--display-insets-only")) displayInsets();
+            else go();
+        } catch(Throwable e) { e.printStackTrace(System.out); System.exit(1); }
+    }
     public static void go() throws Exception {
+        register("GuestCleanHome", "com.android.launcher3",
+            new String[]{"qsb_widget_height", "qsb_shadow_height"}, new int[]{0, 0});
+        displayInsets();
+    }
+    public static void displayInsets() throws Exception {
+        // I2401: 120 px panel corners at 600 dpi. Keep status content inside
+        // the rounded edge without changing the display mode or cutout shape.
+        // TYPE_DIMENSION complex values: integral dp is (value << 8) | 1.
+        register("OpenOOSStatusInsets", "com.android.systemui",
+            new String[]{"status_bar_padding_start", "status_bar_padding_end", "status_bar_padding_top"},
+            new int[]{(24 << 8) | 1, (24 << 8) | 1, (4 << 8) | 1});
+    }
+    private static void register(String name, String target, String[] resources, int[] values) throws Exception {
         Class<?> fb = Class.forName("android.content.om.FabricatedOverlay$Builder");
         Object builder = fb.getConstructor(String.class,String.class,String.class)
-            .newInstance("com.android.shell","GuestCleanHome","com.android.launcher3");
-        for (Method m : fb.getMethods()) {
-            if (m.getName().equals("setResourceValue")) System.out.println(m);
-        }
+            .newInstance("com.android.shell",name,target);
         Method dim = fb.getMethod("setResourceValue",String.class,int.class,int.class,String.class);
-        for (String name : new String[]{"qsb_widget_height","qsb_shadow_height"})
-            dim.invoke(builder,"com.android.launcher3:dimen/"+name,16,0,null);
+        for (int i = 0; i < resources.length; i++)
+            dim.invoke(builder,target+":dimen/"+resources[i],16,values[i],null);
         Object overlay = fb.getMethod("build").invoke(builder);
         for (Field f : overlay.getClass().getDeclaredFields()) {
             f.setAccessible(true); Object v=f.get(overlay);
@@ -29,6 +44,6 @@ public class GuestHomeOverlay {
         Object manager = Class.forName("android.content.om.IOverlayManager$Stub")
             .getMethod("asInterface",Class.forName("android.os.IBinder")).invoke(null,binder);
         Class.forName("android.content.om.IOverlayManager").getMethod("commit",transaction.getClass()).invoke(manager,transaction);
-        System.out.println("Guest clean home overlay enabled");
+        System.out.println(name+" overlay enabled for "+target);
     }
 }
