@@ -3,8 +3,8 @@
 ## What is available
 
 The repository contains selected current controller scripts, native helper
-sources, Binder bridges, credential service source, hardware helpers, and the
-Monster Halo guest app source. Historical logs, downloaded source trees,
+sources, Binder bridges, credential service source, and hardware helpers.
+Historical logs, downloaded source trees,
 toolchains, APKs, signing keys, images, and session artifacts are excluded.
 
 This snapshot preserves the current experimental implementation. There is no
@@ -16,7 +16,7 @@ the entire runnable setup.
 
 - Windows Python 3.10+ and Android Platform Tools for the controller.
 - Zig 0.13.0 at `toolchain/zig-windows-x86_64-0.13.0/zig.exe` for existing native build scripts.
-- JDK plus Android SDK platform `android-37.0` and build-tools `37.0.0` for Java helpers and Halo.
+- JDK plus Android SDK platform `android-37.0` and build-tools `37.0.0` for Java helpers.
   Set `ANDROID_SDK_ROOT`; the published scripts do not contain a personal SDK path.
 - `libgbinder`, `libglibutil`, and an Alpine aarch64 development sysroot under `network-port/`.
   Fetch scripts also expect `network-port/APKINDEX` from Alpine v3.22.
@@ -42,15 +42,13 @@ python keymint-port/build.py guest-gatekeeper
 python keymint-port/build-compat.py
 python hardware-port/build-java.py hardware-port/GuestBrightness.java hardware-port/guest-brightness.jar
 python hardware-port/build-java.py hardware-port/GuestDataPrepare.java hardware-port/guest-data-prepare.jar
-python hardware-port/build-java.py hardware-port/HaloDaemon.java hardware-port/halo-daemon.jar
+New-Item -ItemType Directory -Force user-tests | Out-Null
 python hardware-port/build-java.py GuestHomeOverlay.java user-tests/guest-home-overlay.jar
-python hardware-port/halo/build.py
 ```
 
-Halo's script generates a local development signing key. Keep it private; it is
-not a production signing scheme. Original binaries and build products stay out
+Original binaries and build products stay out
 of Git. The controller maps local runtime paths to device names in `gsi.py:RUNTIME`.
-The [runtime inventory](runtime-inventory.json) covers 54 current runtime inputs;
+The [runtime inventory](runtime-inventory.json) covers 52 current runtime inputs;
 several require external files or additional build recipes.
 
 ## Recent changes preserved in this source
@@ -62,7 +60,7 @@ several require external files or additional build recipes.
 - Prepare guest user data and labels and grow the offline userdata image to 32 GiB.
 - Track guest-created keys and run a separate guest credential verifier.
 - Encode absent KeyMint application ID/data as empty AIDL byte vectors instead
-  of null. This latest change still needs end-to-end owner testing.
+  of null. This latest change still needs end-to-end testing.
 - Give the iQOO 13 status bar 24 dp side padding and 4 dp top padding through
   a guest SystemUI overlay. A brief font-scale refresh applies it to the running
   view, then restores the startup script's 1.0 scale. The live portrait capture

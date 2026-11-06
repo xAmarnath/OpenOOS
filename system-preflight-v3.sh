@@ -654,7 +654,7 @@ cp "$S/guest-ui-config.sh" "$R/data/local/tmp/guest-ui-config.sh"
 cp "$S/guest-home-overlay.sh" "$R/data/local/tmp/guest-home-overlay.sh"
 cp "$S/guest-home-overlay.jar" "$R/data/local/tmp/guest-home-overlay.jar"
 cp "$S/guest-input-fix.jar" "$R/data/local/tmp/guest-input-fix.jar"
-for file in guest-hardware.sh halo-daemon.jar vivo-services-stock.jar guest-brightness.jar; do
+for file in guest-hardware.sh guest-brightness.jar; do
     cp "$S/$file" "$R/data/local/tmp/$file"
 done
 cp "$R/system/bin/app_process64" "$R/data/local/tmp/guest-app-process"
@@ -665,7 +665,7 @@ cat /sys/class/backlight/panel0-backlight/brightness > "$RUN/brightness.before"
 touch "$R/data/local/tmp/panel-brightness"
 "$B" mount --bind /sys/class/backlight/panel0-backlight/brightness "$R/data/local/tmp/panel-brightness"
 "$B" mount -o remount,bind,rw "$R/data/local/tmp/panel-brightness"
-"$S/guest-root" "$R" /system/bin/sh /data/local/tmp/guest-hardware.sh > "$RUN/halo-daemon.log" 2>&1 &
+"$S/guest-root" "$R" /system/bin/sh /data/local/tmp/guest-hardware.sh > "$RUN/guest-hardware.log" 2>&1 &
 "$S/guest-root" "$R" /system/bin/sh -c 'until test "$(getprop sys.boot_completed)" = 1; do sleep 1; done; exec /system/bin/sh /data/local/tmp/guest-ui-config.sh' > "$RUN/ui-config.log" 2>&1 &
 if test "${GSI_NETWORK_TEST:-0}" = 1; then
     "$S/guest-root" "$R" /system/bin/sh -c 'until test "$(getprop sys.boot_completed)" = 1; do sleep 1; done; sleep 5; cmd wifi set-wifi-enabled enabled' > "$RUN/wifi-enable.log" 2>&1 &

@@ -10,8 +10,8 @@
       "sha256": "2c4390a1be0e30f06c13c7a2021cdc9ed3ea73eca224e636fa908652972e28be"
     },
     ".gitignore": {
-      "bytes": 2270,
-      "sha256": "0fbe8c831cbe6540240651e93ba6ebb492c6ab86562979d649c56ad69c6b59b5"
+      "bytes": 1861,
+      "sha256": "c223088029ce73927594b90bf60253c0760c9a2023dd3528ee92db2066487e86"
     },
     "GuestHomeOverlay.java": {
       "bytes": 3179,
@@ -22,8 +22,8 @@
       "sha256": "75764bb4d01624f08e0cb7e638ae039d2722bb88120ec42d8b033aad01471a3e"
     },
     "README.md": {
-      "bytes": 8727,
-      "sha256": "34a8e0cbcede6f51a9b8dd6c0f530ad9a115270cf4c27144d64bdc81ccb472db"
+      "bytes": 8789,
+      "sha256": "398269eff7a28c4124b7550a18f8ead2164ce60671465d177f84fef5e9104575"
     },
     "binder-device.c": {
       "bytes": 588,
@@ -38,20 +38,20 @@
       "sha256": "f8ebf3d5b8312d33020cf3f11998ae2578638a35918cbd9d3fbf88dab8adf870"
     },
     "docs/DEVELOPMENT.md": {
-      "bytes": 4529,
-      "sha256": "cbafe701251cc48f552fc0f8314e0b033ada60825959eb26bc888dc55c1fbb35"
+      "bytes": 4294,
+      "sha256": "42d13238907450852a1c87ddc716a56ca2489500b8f07080d613ac115aed1cb6"
     },
     "docs/DISTRIBUTION.md": {
-      "bytes": 2346,
-      "sha256": "984b7da7bbc4f912c0c009ffbef6b97b0989bde5812f78467b1a38de48fa02e6"
+      "bytes": 2513,
+      "sha256": "cf0f4cd9c9e6e59d5af178b727e3cd654186c3ba2b2c4eda0ba9e6a9c0e318e6"
     },
     "docs/OPERATIONS.md": {
-      "bytes": 2842,
-      "sha256": "cd40fb1191e2b574a164009b432e5b52dd54772eae2d151d60a6e6e019043c0b"
+      "bytes": 2832,
+      "sha256": "79948ce5d592b1830456cf97de0475c2949f0940975ff0ebf00b5c657ddf430b"
     },
     "docs/runtime-inventory.json": {
-      "bytes": 14705,
-      "sha256": "5eabf93aa43c5d212e0cc9bb6b6bb8a727321f4cf1eab90d3afc13be7410ce12"
+      "bytes": 14314,
+      "sha256": "aaf14435104cde12bc0e6bcff2be11bb0899df49150230beda2a044687b37584"
     },
     "docs/workspace-sizes.json": {
       "bytes": 1477,
@@ -62,8 +62,8 @@
       "sha256": "bc8d789f74d3f2e533460f7eeecc5c6bdfb39f9cebc59f825fdbb4ea4433bec3"
     },
     "gsi.py": {
-      "bytes": 13805,
-      "sha256": "87da1dd97913ebe4d72bd9345348119ee32957542408d1eb604b27557e190fe5"
+      "bytes": 13720,
+      "sha256": "e96bbc493dba13edfd1377c4a2e742e3bfc0f257ba9ccb57d4c9734ab68d7ef9"
     },
     "guest-clean.c": {
       "bytes": 1014,
@@ -129,10 +129,6 @@
       "bytes": 2927,
       "sha256": "18eb175bc5cb2e802ad4b25b0e77905022be394b24c820a57ce3150ad59fbab5"
     },
-    "hardware-port/HaloDaemon.java": {
-      "bytes": 4834,
-      "sha256": "215dc77d8aa86f5cedf07a2da726323d773e58bfe4e890b2f340e2ce52be4356"
-    },
     "hardware-port/build-java.py": {
       "bytes": 554,
       "sha256": "527394d08228fa4e4b9e838329e2a4b82321ae32998645a30a857feca08d1ea5"
@@ -142,40 +138,8 @@
       "sha256": "4b64a2145676f811407a3d760dffa17c69ac3a37846d2ecada90b3b4a2b11527"
     },
     "hardware-port/guest-hardware.sh": {
-      "bytes": 977,
-      "sha256": "fbe0bf02f59dcc4db6f528f067baaff60eee5564fa0b776bb050b1905be10534"
-    },
-    "hardware-port/halo/AndroidManifest.xml": {
-      "bytes": 981,
-      "sha256": "5c99a6aefd7c4550178c4ad1b06f34df21e58e769050431c98a98511de2cc0a8"
-    },
-    "hardware-port/halo/build.py": {
-      "bytes": 1354,
-      "sha256": "ca7e86186aee14e1c799b2c7dc86282f2dea42e0e7c9bf6175da3868a1bab917"
-    },
-    "hardware-port/halo/res/drawable/halo.xml": {
-      "bytes": 415,
-      "sha256": "d31ce1b5152054ca9fa9e52c04cbe4213ff59a7acbb2ed441f64a31f4a5de26a"
-    },
-    "hardware-port/halo/res/values-night/styles.xml": {
-      "bytes": 249,
-      "sha256": "8b7b51ebacdb349d773a16ed4080dfaf60565447f71b2ecf27a3b0b8921fabf2"
-    },
-    "hardware-port/halo/res/values/styles.xml": {
-      "bytes": 254,
-      "sha256": "e2d508bb9680a91ae4bf8a666cf9d581a31e6ab9edf86ec7f6775a062bb3d434"
-    },
-    "hardware-port/halo/src/org/gsi/halo/HaloClient.java": {
-      "bytes": 505,
-      "sha256": "5343d5dca54d1a5587d0f0e63a6cc596dc94fd0606e490e6379e83b1829f66e4"
-    },
-    "hardware-port/halo/src/org/gsi/halo/HaloNotifications.java": {
-      "bytes": 665,
-      "sha256": "c1532c7e6d0c250ba0c6ff3c18da06e3592b127afeb0d0afc80a1b0a53d8f5ae"
-    },
-    "hardware-port/halo/src/org/gsi/halo/MainActivity.java": {
-      "bytes": 4698,
-      "sha256": "02114d538528df54d6d0727780811fcbcaff0152979b65a1562c491c8eb0f377"
+      "bytes": 640,
+      "sha256": "476cd45fe45ba3f570b629dbf8ff119b0fb75f9ff0a27e23dfad66fd780cb290"
     },
     "hardware-port/mount-gapps.sh": {
       "bytes": 2000,
@@ -190,8 +154,8 @@
       "sha256": "216a4041c2449761ebb747a312b206717926a28f233130ab2f13c0f9e48bde4d"
     },
     "hardware-status.txt": {
-      "bytes": 1138,
-      "sha256": "a15e91d66ada44e17b8a9b467f3f95be90f04b6bc33f91917eb2c044e5805776"
+      "bytes": 1140,
+      "sha256": "46818ec666af1c5b1396c65bc5b6b4d1f8c359e55ad2c162d3a8400ca02b8f4c"
     },
     "host-fd-clean.c": {
       "bytes": 210,
@@ -270,8 +234,8 @@
       "sha256": "803c553151f0d74f336b3dd86f1a4ed532b63718a9e616f4c4e613aa681936ad"
     },
     "network-port/hardware-bridge.c": {
-      "bytes": 1886,
-      "sha256": "3054ebec383045c7f1204723676b3a7f3e3f04dd7d7001cb4b9a6122ac53fdd6"
+      "bytes": 1831,
+      "sha256": "c3bd893362e534ae6532781468f18a3be7ddf410cb5782c11c51a4afb9e583c2"
     },
     "network-port/network-bridge.c": {
       "bytes": 2257,
@@ -294,8 +258,8 @@
       "sha256": "70fb97b4652a5f74957748eb14fa2570047ac1013c5ef3431def993748fa250f"
     },
     "system-preflight-v3.sh": {
-      "bytes": 39710,
-      "sha256": "4805093ba55214a54c320784f17f3425baf291eac2821e35d10c30b090253669"
+      "bytes": 39673,
+      "sha256": "78cb129ff71e07e9183873b4b9b108c9a1cee7c982b798444036b6f24cac8067"
     },
     "tools/verify-source.py": {
       "bytes": 2975,

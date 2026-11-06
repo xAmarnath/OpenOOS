@@ -6,7 +6,7 @@ Earlier sessions reached Home, Settings and About, displayed without blinking,
 connected Wi-Fi, produced camera previews and sensor events, and changed brightness.
 These earlier observations do not establish stability of the latest revision.
 
-Latest guest unlock-key encoding fix: implemented; owner validation pending.
+Latest guest unlock-key encoding fix: implemented; end-to-end testing pending.
 Screen lock, storage/download saving, hardware attestation and Google login:
 end-to-end validation remains open. Google sign-in has been reported failing.
 No-SIM modem tests do not prove calls, SMS or mobile data work. Audio untested.

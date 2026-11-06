@@ -60,7 +60,7 @@ guest files, images, and logs on the phone; the PC checkout remains.
 
 ## Private backup bundles
 
-`guest_bundle.py export --output PATH` is intended for the owner's local backup.
+`guest_bundle.py export --output PATH` creates a local private backup.
 It collects existing assets and a prepared data seed. It is **not a public release
 exporter** and does not sanitize accounts, Wi-Fi settings, or guest data.
 Its verifier/installer depends on the complete matching bundle and compiled

@@ -4,7 +4,7 @@
 
 ### Open Origin OS
 
-**One phone. A different Android userspace.**
+**A new Android userspace. The hardware you already have.**
 
 [![Android 17](https://img.shields.io/badge/Android-17-3DDC84?logo=android&logoColor=white)](#what-is-this)
 [![iQOO 13](https://img.shields.io/badge/Device-iQOO_13-F5BD17)](#compatibility)
@@ -32,7 +32,7 @@ The name expands to **Open Origin OS**. This project is a community experiment;
 it does not contain OriginOS source code and is not affiliated with vivo or iQOO.
 The approach was inspired by [OneLineage](https://github.com/WeWaffles/OneLineage).
 
-### The idea in four lines
+### At a glance
 
 - **Temporary root starts the session.** The controller uses the existing `sux` setup.
 - **A private filesystem view holds the guest.** GSI and APEX images are mounted read-only; guest data uses its own image file.
@@ -42,17 +42,10 @@ The approach was inspired by [OneLineage](https://github.com/WeWaffles/OneLineag
 ## How it works
 
 ```mermaid
-flowchart TD
-    PC[Windows controller · Python + ADB] --> ROOT[Temporary sux root]
-    ROOT --> SUP[Session supervisor]
-    SUP --> NS[Private mount namespace]
-    NS --> GSI[Android 17 GSI · framework + apps]
-    NS --> DATA[Persistent guest data image]
-    GSI --> BRIDGE[Binder bridges + compatibility helpers]
-    BRIDGE --> VENDOR[Stock vendor services]
-    VENDOR --> HW[Display · Wi-Fi · camera · sensors]
-    SUP --> REC[Stop / failure recovery]
-    REC --> STOCK[Restore stock Android services]
+flowchart LR
+    A["ADB + temporary root"] --> G["Android 17 guest"]
+    D[("Guest data")] <--> G
+    G <-->|Service bridges| H["Stock kernel + vendor services"]
 ```
 
 At handover, the runtime stops selected stock services, including stock Zygote
@@ -69,26 +62,37 @@ change during a session. See [storage and recovery](docs/OPERATIONS.md).
 
 ## Feature status
 
-These are observations from development sessions, **not a guarantee for the
-latest build**. The latest unlock-key encoding fix still needs owner validation.
+**✅ Verified for the behavior listed · ❌ Known failure without a confirmed fix · ⬜ Unverified**
 
-| Feature | Observed status |
-| :--- | :--- |
-| Home screen, Settings, About phone | Reached in earlier guest sessions |
-| Display | Owner confirmed visible without blinking after the inherited file-descriptor fix |
-| Gestures, density, transitions | Configured and exercised in earlier sessions; ongoing user validation |
-| Wi-Fi | Connected and Android validated internet access in an earlier session |
-| Modem | Baseband and two SIM slots detected; calls, SMS, and mobile data untested without a SIM |
-| Camera | OpenCamera preview worked; stock vivo Camera has unresolved framework dependencies |
-| Sensors | 54 enumerated; live events observed from several standard sensors |
-| Brightness | Slider controlled the physical backlight in an earlier session |
-| Bluetooth / NFC / GNSS | Partial bring-up; pairing, NFC transactions, and a location fix remain unverified |
-| Monster Halo | Guest control app and stock VLight HAL integration; physical effects need confirmation |
-| Storage | Persistent image; controller targets 32 GiB. Saving and downloads need retesting after storage fixes |
-| Screen lock / KeyMint | Guest key bridge and isolated credential service implemented; end-to-end validation pending |
-| Google sign-in | **Unresolved**. Google services launching is not a successful account login |
-| Hardware attestation | **Unresolved**. A hardware backend does not establish successful app attestation or Play Integrity |
-| Audio | Not tested |
+Results are scoped to development tests on the target device. A check mark does
+not imply that every use case or the latest build has passed a full regression test.
+
+| Feature | Status | Tested behavior / remaining work |
+| :--- | :---: | :--- |
+| Home screen | ✅ | Launcher and apps displayed on the phone |
+| Settings & About phone | ✅ | Screens open and device information is populated |
+| Display output | ✅ | Visible without blinking after the frame-fence fix |
+| Resolution & status bar | ✅ | 1440 × 3168 at 600 dpi; portrait clock clears the rounded corners |
+| Gesture navigation & transitions | ⬜ | Configured; smooth cross-app behavior needs verification |
+| Initial setup wizard | ⬜ | Full first-run flow needs verification |
+| APK installation | ✅ | App installation and launch verified |
+| Wi-Fi & internet | ✅ | Connected network with Android-validated internet access |
+| Modem detection | ✅ | Baseband and two SIM slots detected |
+| Calls, SMS & mobile data | ⬜ | Active-SIM testing pending |
+| Camera preview | ✅ | OpenCamera preview works |
+| Stock vivo Camera | ❌ | Proprietary framework dependencies remain unresolved |
+| Sensors | ✅ | 54 enumerated; live events from several standard sensors |
+| Brightness slider | ✅ | Controls the physical backlight |
+| Bluetooth | ⬜ | Pairing and data transfer need verification |
+| NFC | ⬜ | Transactions need verification |
+| GNSS | ⬜ | A location fix needs verification |
+| Persistent guest data | ✅ | Separate writable 32 GiB image |
+| Downloads & media saving | ❌ | Previous checks failed; storage fixes await retesting |
+| Screen lock | ❌ | Setup failed; latest key-bridge fixes await retesting |
+| Google services | ✅ | Imported apps and services launch |
+| Google sign-in | ❌ | Account login does not complete |
+| Hardware attestation | ❌ | App attestation failed; backend integration needs validation |
+| Audio | ⬜ | Untested |
 
 ## Compatibility
 
@@ -146,7 +150,7 @@ using the device commands, reset, or removal.
 | `guest-*.c`, `guest-fd-hygiene.h` | Guest launch, properties, storage, and descriptor handling |
 | `network-port/` | Hardware/network Binder bridges and UID network handling |
 | `keymint-port/` | Guest-owned key tracking and guest credential service |
-| `hardware-port/` | Sensors, brightness, camera helpers, and Monster Halo app source |
+| `hardware-port/` | Sensors, brightness, and camera helpers |
 | `docs/` | Runtime inventory, limitations, build notes, and lifecycle commands |
 | `tools/` | Source package verification |
 

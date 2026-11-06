@@ -27,13 +27,12 @@ RUNTIME = {
     **{n: 'keymint-port/' + n for n in ('owned-key-bridge', 'guest-gatekeeper', 'libguest-compat.so')},
     **{n: 'hardware-port/' + n for n in (
         'libsensorservice-vivo.so', 'libsensorserviceaidl-vivo.so',
-        'libcamera-binder-pool.so', 'halo-daemon.jar', 'guest-brightness.jar',
+        'libcamera-binder-pool.so', 'guest-brightness.jar',
         'guest-data-prepare.jar',
         'guest-hardware.sh', 'mount-gapps.sh', 'guest-gapps-permissions.xml',
         'privapp-permissions-google-system.xml',
         'privapp-permissions-google-system_ext.xml',
         'privapp-permissions-google-product.xml')},
-    'vivo-services-stock.jar': 'hardware-port/vivo-services.jar',
     'guest-home-overlay.jar': 'user-tests/guest-home-overlay.jar',
     'guest-input-fix.jar': 'user-tests/guest-input-fix.jar',
 }

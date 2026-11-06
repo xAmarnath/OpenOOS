@@ -1,5 +1,5 @@
 {
-  "description": "Current local runtime reference. Hashes identify files; they do not grant redistribution rights.",
+  "description": "Runtime reference for the published controller. Hashes identify files; they do not grant redistribution rights. Rebuilt native inputs require guest validation.",
   "files": [
     {
       "path": "binder-device",
@@ -68,10 +68,10 @@
     {
       "path": "hardware-port/guest-hardware.sh",
       "remote_name": "guest-hardware.sh",
-      "bytes": 977,
-      "sha256": "fbe0bf02f59dcc4db6f528f067baaff60eee5564fa0b776bb050b1905be10534",
+      "bytes": 640,
+      "sha256": "476cd45fe45ba3f570b629dbf8ff119b0fb75f9ff0a27e23dfad66fd780cb290",
       "included_source": true,
-      "old_bundle": "unchanged"
+      "old_bundle": "changed"
     },
     {
       "path": "user-tests/guest-home-overlay.jar",
@@ -202,20 +202,13 @@
       "old_bundle": "missing"
     },
     {
-      "path": "hardware-port/halo-daemon.jar",
-      "remote_name": "halo-daemon.jar",
-      "bytes": 5868,
-      "sha256": "c5a4058dfb1033193c43f658e5ce80360bf6b94e5afe8b8a8580e294e0f8de27",
-      "included_source": false,
-      "old_bundle": "unchanged"
-    },
-    {
       "path": "network-port/hardware-bridge",
       "remote_name": "hardware-bridge",
-      "bytes": 2447136,
-      "sha256": "1d51477a9e4ab18e8e1953a1e8095a2ef0649ba83db50a63fcc477665a13635c",
+      "bytes": 2447056,
+      "sha256": "0f2d4b35891efa567a00dfc347f5168967c40bc82ff096357110550cad6c8046",
       "included_source": false,
-      "old_bundle": "unchanged"
+      "old_bundle": "changed",
+      "validation": "Cross-compiled successfully; this revision has not been deployed to the guest."
     },
     {
       "path": "host-fd-clean",
@@ -404,18 +397,10 @@
     {
       "path": "system-preflight-v3.sh",
       "remote_name": "system-preflight-v3.sh",
-      "bytes": 39710,
-      "sha256": "4805093ba55214a54c320784f17f3425baf291eac2821e35d10c30b090253669",
+      "bytes": 39673,
+      "sha256": "78cb129ff71e07e9183873b4b9b108c9a1cee7c982b798444036b6f24cac8067",
       "included_source": true,
       "old_bundle": "changed"
-    },
-    {
-      "path": "hardware-port/vivo-services.jar",
-      "remote_name": "vivo-services-stock.jar",
-      "bytes": 20453220,
-      "sha256": "8b3142ca0110db8e9ce640c4d9e3d020f15a7730f151cb63f82d0127c2c47bba",
-      "included_source": false,
-      "old_bundle": "unchanged"
     },
     {
       "path": "worker-v3.sh",

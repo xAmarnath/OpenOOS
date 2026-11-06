@@ -9,7 +9,7 @@ logical file sizes, not compressed transfer sizes or sparse disk allocation.
 | --- | ---: | ---: | ---: |
 | Development workspace | 29,598 | 2,505,286,641 | 2.505 |
 | Existing private bundle | 64 | 3,297,628,149 | 3.298 |
-| Current controller runtime inputs | 54 | 78,885,310 | 0.079 |
+| Published controller runtime references | 52 | 58,426,292 | 0.058 |
 
 The first two rows are separate collections with duplicated content; they should
 not be added to estimate the download size. The workspace is not the complete
@@ -17,7 +17,9 @@ guest installation on the phone. The 32 GiB guest data capacity is not a GitHub
 repository or download size.
 
 The bundle's `guest-assets.tar.gz` is 3,251,226,393 bytes. It is private and stale:
-of the 54 current runtime inputs, 6 differ from that bundle and 5 are absent.
+of the 52 runtime references, 9 differ from that bundle and 5 are absent.
+The hardware bridge reference includes a successful native rebuild that has not
+been deployed to the guest. These sizes describe local inputs, not a tested release.
 See [workspace groups](workspace-sizes.json) and [runtime files](runtime-inventory.json).
 
 ## Public repository

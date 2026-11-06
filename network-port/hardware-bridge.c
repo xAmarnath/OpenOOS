@@ -24,7 +24,6 @@ int main(int argc, char **argv) {
         "android.hardware.sensors.ISensors/default",
         "android.hardware.camera.provider.ICameraProvider/vendor_qti/0",
         "android.hardware.camera.provider.ICameraProvider/vendorVcf/0",
-        "vendor.vivo.hardware.vlight.IVlight/default",
         "android.hardware.gnss.IGnss/default",
         "android.hardware.ir.IConsumerIr/default",
         "android.hardware.nfc.INfc/default",
