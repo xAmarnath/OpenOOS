@@ -22,8 +22,8 @@
       "sha256": "75764bb4d01624f08e0cb7e638ae039d2722bb88120ec42d8b033aad01471a3e"
     },
     "README.md": {
-      "bytes": 8740,
-      "sha256": "817eb08b77e7d2483509a6b1e9bae7d9aa6a0f9f54ac42ac45ab173ec70fc2c5"
+      "bytes": 8744,
+      "sha256": "005ca4caa5a5d2612de3d2547a743f8022063642a61196457d0095d6b8d9a854"
     },
     "binder-device.c": {
       "bytes": 588,
@@ -174,8 +174,8 @@
       "sha256": "216a4041c2449761ebb747a312b206717926a28f233130ab2f13c0f9e48bde4d"
     },
     "hardware-status.txt": {
-      "bytes": 1081,
-      "sha256": "a983ced9211864fae3ded87fa02d38e9923f2494234174c175d0469399c5bed2"
+      "bytes": 1103,
+      "sha256": "95b59842094d25d13a84314682b4d029c98b6643526eaa52cc5d6f9b914f62a3"
     },
     "host-fd-clean.c": {
       "bytes": 210,

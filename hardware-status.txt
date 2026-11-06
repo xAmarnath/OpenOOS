@@ -6,7 +6,7 @@ Display, touch/gestures, Wi-Fi, camera preview, sensors and brightness work.
 Shared storage, downloads, hardware-backed app attestation and Google login work.
 Bluetooth discovery works; pairing and transfer remain untested.
 NFC enables/disables; no tag available for a transaction test.
-GNSS starts; satellite fix not yet obtained.
+GNSS reports satellites; no location fix obtained during the test.
 Audio uses a dummy backend without a physical speaker route.
 Screen-lock setup remains unresolved. No-SIM tests do not verify calls or data.
 

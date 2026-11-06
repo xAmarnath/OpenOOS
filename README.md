@@ -83,7 +83,7 @@ change during a session. See [storage and recovery](docs/OPERATIONS.md).
 | Brightness slider | ✅ | Controls the physical backlight |
 | Bluetooth | ✅ | Device discovery works; pairing and transfer untested |
 | NFC | ⬜ | Controller enables; tag reading untested |
-| GNSS | ⬜ | Receiver starts; satellite fix not yet obtained |
+| GNSS | ⬜ | Satellite reports received; location fix unverified |
 | Persistent storage | ✅ | Separate writable 32 GiB guest data image |
 | Shared storage | ✅ | Downloads and media saving work |
 | Credential backend | ❌ | Screen-lock setup failed; latest key-bridge fixes await retesting |
