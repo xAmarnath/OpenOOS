@@ -1,16 +1,16 @@
 OpenOOS / iQOO 13 I2401 - experimental Android 17 userspace guest
 Source snapshot: 6 November 2026.
 
-See README.md for the current feature matrix and docs/DEVELOPMENT.md for limitations.
-Earlier sessions reached Home, Settings and About, displayed without blinking,
-connected Wi-Fi, produced camera previews and sensor events, and changed brightness.
-These earlier observations do not establish stability of the latest revision.
+See README.md for the current hardware matrix.
+Display, touch/gestures, Wi-Fi, camera preview, sensors and brightness work.
+Shared storage, downloads, hardware-backed app attestation and Google login work.
+Bluetooth discovery works; pairing and transfer remain untested.
+NFC enables/disables; no tag available for a transaction test.
+GNSS starts; satellite fix not yet obtained.
+Audio uses a dummy backend without a physical speaker route.
+Screen-lock setup remains unresolved. No-SIM tests do not verify calls or data.
 
-Latest guest unlock-key encoding fix: implemented; end-to-end testing pending.
-Screen lock, storage/download saving, hardware attestation and Google login:
-end-to-end validation remains open. Google sign-in has been reported failing.
-No-SIM modem tests do not prove calls, SMS or mobile data work. Audio untested.
-
+The switcher app displays the current OS and one switch button.
 Guest images, binaries, APKs, account data and prepared data seed are not in Git.
 Reboot clears temporary root/runtime mounts but retains guest data files.
 Sessions have no fixed time limit; manual stop and failure recovery remain.

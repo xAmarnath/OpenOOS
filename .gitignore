@@ -75,3 +75,12 @@
 !/tools/verify-source.py
 !/worker-v3.sh
 !/zygote-launch.c
+!/switcher/controller.c
+!/switcher/transition.sh
+!/switcher/start-controller.sh
+!/switcher/socket.rules
+!/switcher/AndroidManifest.xml
+!/switcher/src/org/openoos/switcher/MainActivity.java
+!/switcher/res/drawable/ic_switch.xml
+!/switcher/build.py
+!/docs/SWITCHER.md

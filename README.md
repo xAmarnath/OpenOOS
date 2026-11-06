@@ -81,14 +81,14 @@ change during a session. See [storage and recovery](docs/OPERATIONS.md).
 | Stock vivo Camera | ❌ | Proprietary framework dependencies remain unresolved |
 | Sensors | ✅ | 54 enumerated; live events from several standard sensors |
 | Brightness slider | ✅ | Controls the physical backlight |
-| Bluetooth | ⬜ | Pairing and data transfer need verification |
-| NFC | ⬜ | Transactions need verification |
-| GNSS | ⬜ | A location fix needs verification |
+| Bluetooth | ✅ | Device discovery works; pairing and transfer untested |
+| NFC | ⬜ | Controller enables; tag reading untested |
+| GNSS | ⬜ | Receiver starts; satellite fix not yet obtained |
 | Persistent storage | ✅ | Separate writable 32 GiB guest data image |
 | Shared storage | ✅ | Downloads and media saving work |
 | Credential backend | ❌ | Screen-lock setup failed; latest key-bridge fixes await retesting |
 | Hardware-backed keys & attestation | ✅ | Hardware-backed key generation and app attestation work |
-| Audio | ⬜ | Untested |
+| Audio | ❌ | Dummy backend active; speaker route missing |
 
 ## Compatibility
 
@@ -135,6 +135,9 @@ python gsi.py close
 repository alone is insufficient. Read [Operations](docs/OPERATIONS.md) before
 using the device commands, reset, or removal.
 
+The [switcher app](docs/SWITCHER.md) displays the current OS and one switch button.
+It uses the prepared runtime and requires temporary root after each reboot.
+
 ## Inside the repo
 
 | Path | Purpose |
@@ -147,6 +150,7 @@ using the device commands, reset, or removal.
 | `network-port/` | Hardware/network Binder bridges and UID network handling |
 | `keymint-port/` | Guest-owned key tracking and guest credential service |
 | `hardware-port/` | Sensors, brightness, and camera helpers |
+| `switcher/` | On-device switcher app and root controller |
 | `docs/` | Runtime inventory, limitations, build notes, and lifecycle commands |
 | `tools/` | Source package verification |
 

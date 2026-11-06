@@ -10,8 +10,8 @@
       "sha256": "2c4390a1be0e30f06c13c7a2021cdc9ed3ea73eca224e636fa908652972e28be"
     },
     ".gitignore": {
-      "bytes": 1988,
-      "sha256": "5688a4e15a83f0a8efdac563a2a461dd78ea46f15353881f00b0fd51b6283c15"
+      "bytes": 2254,
+      "sha256": "d2537acb4d45dac6536d1041e831e4058841eb8e7ca9ff9a3e5b8d4ece80cb23"
     },
     "GuestHomeOverlay.java": {
       "bytes": 3179,
@@ -22,8 +22,8 @@
       "sha256": "75764bb4d01624f08e0cb7e638ae039d2722bb88120ec42d8b033aad01471a3e"
     },
     "README.md": {
-      "bytes": 8449,
-      "sha256": "14bf28626ab66b6c87e7183c7cbb06452c4ad02b06bba3998d3ef53522e269a6"
+      "bytes": 8740,
+      "sha256": "817eb08b77e7d2483509a6b1e9bae7d9aa6a0f9f54ac42ac45ab173ec70fc2c5"
     },
     "binder-device.c": {
       "bytes": 588,
@@ -38,8 +38,8 @@
       "sha256": "f8ebf3d5b8312d33020cf3f11998ae2578638a35918cbd9d3fbf88dab8adf870"
     },
     "docs/DEVELOPMENT.md": {
-      "bytes": 4294,
-      "sha256": "42d13238907450852a1c87ddc716a56ca2489500b8f07080d613ac115aed1cb6"
+      "bytes": 4386,
+      "sha256": "646102587fd3d9d61ab48e308f99db28637e57f46e1629d7e5fb7f3769009339"
     },
     "docs/DISTRIBUTION.md": {
       "bytes": 2513,
@@ -48,6 +48,10 @@
     "docs/OPERATIONS.md": {
       "bytes": 2832,
       "sha256": "79948ce5d592b1830456cf97de0475c2949f0940975ff0ebf00b5c657ddf430b"
+    },
+    "docs/SWITCHER.md": {
+      "bytes": 3053,
+      "sha256": "183ec82dc63086a424b58bde664f36d39689e083f5f85ddeae818b1eddf67ab0"
     },
     "docs/images/about-phone.png": {
       "bytes": 100116,
@@ -130,8 +134,8 @@
       "sha256": "29e0124b228049693f7549ea19e42de123b255ed84a728fad8d87ef0e855c095"
     },
     "guest-ui-config.sh": {
-      "bytes": 3079,
-      "sha256": "31747aaced4b64f4383830e5023a7e11575c900b3b35e0f3618792f71f293b03"
+      "bytes": 3120,
+      "sha256": "fe8bc94b284fe5168a002b1fdfe55736eb404024176acd92295a84dc3b8a3ef9"
     },
     "guest_bundle.py": {
       "bytes": 8551,
@@ -170,8 +174,8 @@
       "sha256": "216a4041c2449761ebb747a312b206717926a28f233130ab2f13c0f9e48bde4d"
     },
     "hardware-status.txt": {
-      "bytes": 1140,
-      "sha256": "46818ec666af1c5b1396c65bc5b6b4d1f8c359e55ad2c162d3a8400ca02b8f4c"
+      "bytes": 1081,
+      "sha256": "a983ced9211864fae3ded87fa02d38e9923f2494234174c175d0469399c5bed2"
     },
     "host-fd-clean.c": {
       "bytes": 210,
@@ -272,6 +276,38 @@
     "start-v3.sh": {
       "bytes": 1869,
       "sha256": "70fb97b4652a5f74957748eb14fa2570047ac1013c5ef3431def993748fa250f"
+    },
+    "switcher/AndroidManifest.xml": {
+      "bytes": 754,
+      "sha256": "798468c9924278ae9edffb54cced9a0b5ab7585372ff7e1a7f00f43828614b8a"
+    },
+    "switcher/build.py": {
+      "bytes": 1874,
+      "sha256": "182941e11a41b5db65c264ce13fc8707efeb6aecd95c3350fd86bf1d82c2c4ed"
+    },
+    "switcher/controller.c": {
+      "bytes": 8333,
+      "sha256": "45f0c5990987b020d735ed9dcc18b1688f09b965a3d39c4e3a85f512ab313548"
+    },
+    "switcher/res/drawable/ic_switch.xml": {
+      "bytes": 447,
+      "sha256": "577d5ca56fc3d4540b1231bb569feae883b0728c28d657f6090c53d9e7dc0de7"
+    },
+    "switcher/socket.rules": {
+      "bytes": 191,
+      "sha256": "79f0c0e16c4c23a9965d432c9f7d8160a17326c0e7c103a491e2fbbda813e656"
+    },
+    "switcher/src/org/openoos/switcher/MainActivity.java": {
+      "bytes": 6729,
+      "sha256": "7e8809278ca3528b39a55c203da039dca2b6ff79fa7a259198cc6939cbd3f332"
+    },
+    "switcher/start-controller.sh": {
+      "bytes": 772,
+      "sha256": "ccfa958b9336927d84834b1c9ac671578f7b896ce1cbd1b74fce732cb3a07c5b"
+    },
+    "switcher/transition.sh": {
+      "bytes": 4006,
+      "sha256": "3d582a4ff5d7b8a56d94ab6907a59ff70b1dfee6956c460ef2d577fee824aa45"
     },
     "system-preflight-v3.sh": {
       "bytes": 39673,

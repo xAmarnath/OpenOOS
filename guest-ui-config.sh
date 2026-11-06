@@ -63,3 +63,4 @@ settings get secure navigation_mode
 settings get global window_animation_scale
 settings get global transition_animation_scale
 settings get global animator_duration_scale
+echo "OpenOOS UI configuration complete"
