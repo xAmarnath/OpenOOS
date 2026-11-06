@@ -1,0 +1,41 @@
+allow { system_server_startup system_server } kernel unix_stream_socket { connectto read write getattr getopt setopt shutdown }
+allow { system_server_startup system_server } kernel binder { call transfer }
+allow { system_server_startup system_server } kernel fd use
+allow { system_server_startup system_server } kernel service_manager list
+allow appdomain kernel binder { call transfer }
+allow appdomain kernel fd use
+allow { appdomain system_server } kernel unix_dgram_socket sendto
+allow { appdomain system_server } kernel unix_stream_socket { connectto read write getattr getopt setopt shutdown }
+allow system_server kernel keystore2 { add_auth change_password change_user clear_ns clear_uid delete_all_keys get_last_auth_time lock pull_metrics reset unlock }
+
+allow { rild hal_wifi_default } kernel binder { call transfer }
+allow { rild hal_wifi_default } kernel fd use
+allow network_stack kernel bpf { map_read map_write }
+allow { system_server_startup system_server } kernel bpf { map_read map_write prog_run }
+
+allow { rild hal_wifi_default } kernel binder { call transfer }
+allow { rild hal_wifi_default } kernel fd use
+allow network_stack kernel bpf { map_read map_write }
+allow { hal_sensors_default hal_camera_default } kernel binder { call transfer }
+allow { hal_sensors_default hal_camera_default } kernel fd use
+allow logd kernel process getattr
+allow { vendor_hal_gnss_qti hal_bluetooth_default } kernel binder { call transfer }
+allow { vendor_hal_gnss_qti hal_bluetooth_default } kernel fd use
+allow hal_nfc_default kernel binder { call transfer }
+allow hal_nfc_default kernel fd use
+allow nfc tmpfs file map
+# Guest keystore uses its normal service identity and per-app key permissions.
+allow keystore kernel binder { call transfer }
+allow keystore kernel fd use
+allow keystore kernel unix_stream_socket { connectto read write getattr getopt setopt shutdown }
+allow keystore kernel service_manager list
+# The isolated launcher selects this domain before exec on the nosuid GSI mount.
+allow keystore keystore_exec file execute_no_trans
+# The guarded endpoint registers only on the checked guest Binder device.
+allow keystore hal_keymint_service service_manager add
+# ART's guest boot image is a memfd created before the webview zygote specializes.
+allow webview_zygote tmpfs file { getattr read map }
+allow webview_zygote kernel unix_stream_socket { connectto read write getattr getopt setopt shutdown }
+# The temporary guest zygote opens descriptors in the kernel domain. WebView's
+# child zygote must inspect those inherited descriptors before it forks renderers.
+allow webview_zygote kernel fd use

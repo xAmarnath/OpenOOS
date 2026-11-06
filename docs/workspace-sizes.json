@@ -1,0 +1,80 @@
+[
+  {
+    "name": "gsi17-work",
+    "files": 29598,
+    "bytes": 2505286641,
+    "groups": {
+      "hardware-port": {
+        "files": 4765,
+        "bytes": 853150782
+      },
+      "toolchain": {
+        "files": 23170,
+        "bytes": 581829563
+      },
+      "user-tests": {
+        "files": 210,
+        "bytes": 278607760
+      },
+      "(root files)": {
+        "files": 365,
+        "bytes": 276059580
+      },
+      "network-port": {
+        "files": 884,
+        "bytes": 167575562
+      },
+      "apps": {
+        "files": 4,
+        "bytes": 163579503
+      },
+      "lifecycle": {
+        "files": 46,
+        "bytes": 87748625
+      },
+      "keymint-port": {
+        "files": 139,
+        "bytes": 82978060
+      },
+      "policy-probe-01": {
+        "files": 9,
+        "bytes": 13712454
+      },
+      "__pycache__": {
+        "files": 6,
+        "bytes": 44752
+      }
+    }
+  },
+  {
+    "name": "iqoo13-gsi17-bundle-final",
+    "files": 64,
+    "bytes": 3297628149,
+    "groups": {
+      "(root files)": {
+        "files": 42,
+        "bytes": 3265038006
+      },
+      "hardware-port": {
+        "files": 13,
+        "bytes": 21305376
+      },
+      "network-port": {
+        "files": 3,
+        "bytes": 7340928
+      },
+      "lifecycle": {
+        "files": 2,
+        "bytes": 3918120
+      },
+      "__pycache__": {
+        "files": 2,
+        "bytes": 21780
+      },
+      "user-tests": {
+        "files": 2,
+        "bytes": 3939
+      }
+    }
+  }
+]

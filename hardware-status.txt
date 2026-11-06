@@ -1,0 +1,18 @@
+OpenOOS / iQOO 13 I2401 - experimental Android 17 userspace guest
+Source snapshot: 6 November 2026.
+
+See README.md for the current feature matrix and docs/DEVELOPMENT.md for limitations.
+Earlier sessions reached Home, Settings and About, displayed without blinking,
+connected Wi-Fi, produced camera previews and sensor events, and changed brightness.
+These earlier observations do not establish stability of the latest revision.
+
+Latest guest unlock-key encoding fix: implemented; owner validation pending.
+Screen lock, storage/download saving, hardware attestation and Google login:
+end-to-end validation remains open. Google sign-in has been reported failing.
+No-SIM modem tests do not prove calls, SMS or mobile data work. Audio untested.
+
+Guest images, binaries, APKs, account data and prepared data seed are not in Git.
+Reboot clears temporary root/runtime mounts but retains guest data files.
+Sessions have no fixed time limit; manual stop and failure recovery remain.
+The guest shares the stock kernel/vendor stack and is not a VM security boundary.
+Private bundle export does not sanitize personal data and must not be published.

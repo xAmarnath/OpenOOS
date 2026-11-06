@@ -1,0 +1,313 @@
+{
+  "description": "Reviewed public source snapshot. Excludes this manifest, binaries, images, credentials and private guest data.",
+  "files": {
+    ".gitattributes": {
+      "bytes": 19,
+      "sha256": "d60f352d0db1404c70afb4bb8b2ca3fd1c610572aa40720e8a0b7baa7885418c"
+    },
+    ".github/workflows/source-check.yml": {
+      "bytes": 361,
+      "sha256": "2c4390a1be0e30f06c13c7a2021cdc9ed3ea73eca224e636fa908652972e28be"
+    },
+    ".gitignore": {
+      "bytes": 2270,
+      "sha256": "0fbe8c831cbe6540240651e93ba6ebb492c6ab86562979d649c56ad69c6b59b5"
+    },
+    "GuestHomeOverlay.java": {
+      "bytes": 2396,
+      "sha256": "f494199c4f3422f714491f54756247c5a025ced2a89d17278bc45645f970ebcf"
+    },
+    "GuestInputFix.java": {
+      "bytes": 1057,
+      "sha256": "75764bb4d01624f08e0cb7e638ae039d2722bb88120ec42d8b033aad01471a3e"
+    },
+    "README.md": {
+      "bytes": 8727,
+      "sha256": "34a8e0cbcede6f51a9b8dd6c0f530ad9a115270cf4c27144d64bdc81ccb472db"
+    },
+    "binder-device.c": {
+      "bytes": 588,
+      "sha256": "cdb4a665718db34802fbe3ad890557d3505a0d04d87ce7129dfea7b93fa2bc8e"
+    },
+    "compile-framework-policy.sh": {
+      "bytes": 295,
+      "sha256": "ee15bc9b303910d609488eb3de43942a12b129efaf227ef864cda22ffb81105b"
+    },
+    "device.py": {
+      "bytes": 1220,
+      "sha256": "f8ebf3d5b8312d33020cf3f11998ae2578638a35918cbd9d3fbf88dab8adf870"
+    },
+    "docs/DEVELOPMENT.md": {
+      "bytes": 4052,
+      "sha256": "5c5282c103df758b550814d144d346a3d684cf7d880d813e1e62f8b5b7366c03"
+    },
+    "docs/DISTRIBUTION.md": {
+      "bytes": 2346,
+      "sha256": "984b7da7bbc4f912c0c009ffbef6b97b0989bde5812f78467b1a38de48fa02e6"
+    },
+    "docs/OPERATIONS.md": {
+      "bytes": 2842,
+      "sha256": "cd40fb1191e2b574a164009b432e5b52dd54772eae2d151d60a6e6e019043c0b"
+    },
+    "docs/runtime-inventory.json": {
+      "bytes": 14707,
+      "sha256": "8b8e238add870d110a070af1c7e15750d9a278e13cb7028a8ff2b58f10cfe934"
+    },
+    "docs/workspace-sizes.json": {
+      "bytes": 1477,
+      "sha256": "89a5587f9fa922a0eb5b593b0a39ffc347cbf4d2522a522734c1893522816b4a"
+    },
+    "framework.rules": {
+      "bytes": 2617,
+      "sha256": "bc8d789f74d3f2e533460f7eeecc5c6bdfb39f9cebc59f825fdbb4ea4433bec3"
+    },
+    "gsi.py": {
+      "bytes": 13805,
+      "sha256": "87da1dd97913ebe4d72bd9345348119ee32957542408d1eb604b27557e190fe5"
+    },
+    "guest-clean.c": {
+      "bytes": 1014,
+      "sha256": "97e4b8321e3c8ffdbbf24261827db06ed3d18285c5e03dc7d21abed65d713c00"
+    },
+    "guest-device.json": {
+      "bytes": 123,
+      "sha256": "1185bc0a5e5813fd062cfd4c26459434fc02177bfecfe9736b8fa8cb35325bd8"
+    },
+    "guest-fd-hygiene.h": {
+      "bytes": 1344,
+      "sha256": "a1962adc3aaf91d37bc4042a48d7bfb388354cce135cd19eb9e51e1237ba42a9"
+    },
+    "guest-home-overlay.sh": {
+      "bytes": 585,
+      "sha256": "b77574ad99358753f06f5ff5b3c4bb4cad79e4bb77f04045b812db33e58f4221"
+    },
+    "guest-keystore-launch.c": {
+      "bytes": 2801,
+      "sha256": "dd345c3ab20c9f1c81126df42dad0324d804da0bd8fc4b27146ec6e788e6a0cc"
+    },
+    "guest-noop.c": {
+      "bytes": 29,
+      "sha256": "2ad75d95660563887d8d3f1d0ae1dcf18c2379cbd83a5c72f5ab276351ee6949"
+    },
+    "guest-props.c": {
+      "bytes": 5339,
+      "sha256": "8ade88234452e97a3039dddc560cbeb7d830260cb4d50b4e51f65c0fc6d86604"
+    },
+    "guest-remount-ro.c": {
+      "bytes": 790,
+      "sha256": "f401116413d4b39bfabfac7c32228885d8a65ff6841e1bd13031736060eab490"
+    },
+    "guest-root.c": {
+      "bytes": 1942,
+      "sha256": "3f46e38025ade05fc0a7b0cbf5e821f26610dae97bc1b5cab52e674f59eedc62"
+    },
+    "guest-service-launch.c": {
+      "bytes": 2068,
+      "sha256": "4023756142be167cf9944f5932edbad1b6000a62572cb5be7cc623072b9c94fe"
+    },
+    "guest-storage-layout.sh": {
+      "bytes": 1473,
+      "sha256": "67d500292418a3d0efaf70efc8136cdd583e1beab69453161bfdb8d1519d9931"
+    },
+    "guest-supervisor.c": {
+      "bytes": 6888,
+      "sha256": "29e0124b228049693f7549ea19e42de123b255ed84a728fad8d87ef0e855c095"
+    },
+    "guest-ui-config.sh": {
+      "bytes": 2852,
+      "sha256": "797e0333d0239c0bb4340648cfb91a36fb7af91459a0115ca2a531a04d7d5445"
+    },
+    "guest_bundle.py": {
+      "bytes": 8551,
+      "sha256": "2414eb1acb5781bdac88346ae9e512e1e457ff343bee82ca11f234084ff1036e"
+    },
+    "hardware-port/GuestBrightness.java": {
+      "bytes": 1400,
+      "sha256": "dc1a07ef0ad4000f0919cd0b27d5d94337101fc8dea57ddf10957971881ae08d"
+    },
+    "hardware-port/GuestDataPrepare.java": {
+      "bytes": 2927,
+      "sha256": "18eb175bc5cb2e802ad4b25b0e77905022be394b24c820a57ce3150ad59fbab5"
+    },
+    "hardware-port/HaloDaemon.java": {
+      "bytes": 4834,
+      "sha256": "215dc77d8aa86f5cedf07a2da726323d773e58bfe4e890b2f340e2ce52be4356"
+    },
+    "hardware-port/build-java.py": {
+      "bytes": 554,
+      "sha256": "527394d08228fa4e4b9e838329e2a4b82321ae32998645a30a857feca08d1ea5"
+    },
+    "hardware-port/camera-binder-pool.c": {
+      "bytes": 717,
+      "sha256": "4b64a2145676f811407a3d760dffa17c69ac3a37846d2ecada90b3b4a2b11527"
+    },
+    "hardware-port/guest-hardware.sh": {
+      "bytes": 977,
+      "sha256": "fbe0bf02f59dcc4db6f528f067baaff60eee5564fa0b776bb050b1905be10534"
+    },
+    "hardware-port/halo/AndroidManifest.xml": {
+      "bytes": 981,
+      "sha256": "5c99a6aefd7c4550178c4ad1b06f34df21e58e769050431c98a98511de2cc0a8"
+    },
+    "hardware-port/halo/build.py": {
+      "bytes": 1354,
+      "sha256": "ca7e86186aee14e1c799b2c7dc86282f2dea42e0e7c9bf6175da3868a1bab917"
+    },
+    "hardware-port/halo/res/drawable/halo.xml": {
+      "bytes": 415,
+      "sha256": "d31ce1b5152054ca9fa9e52c04cbe4213ff59a7acbb2ed441f64a31f4a5de26a"
+    },
+    "hardware-port/halo/res/values-night/styles.xml": {
+      "bytes": 249,
+      "sha256": "8b7b51ebacdb349d773a16ed4080dfaf60565447f71b2ecf27a3b0b8921fabf2"
+    },
+    "hardware-port/halo/res/values/styles.xml": {
+      "bytes": 254,
+      "sha256": "e2d508bb9680a91ae4bf8a666cf9d581a31e6ab9edf86ec7f6775a062bb3d434"
+    },
+    "hardware-port/halo/src/org/gsi/halo/HaloClient.java": {
+      "bytes": 505,
+      "sha256": "5343d5dca54d1a5587d0f0e63a6cc596dc94fd0606e490e6379e83b1829f66e4"
+    },
+    "hardware-port/halo/src/org/gsi/halo/HaloNotifications.java": {
+      "bytes": 665,
+      "sha256": "c1532c7e6d0c250ba0c6ff3c18da06e3592b127afeb0d0afc80a1b0a53d8f5ae"
+    },
+    "hardware-port/halo/src/org/gsi/halo/MainActivity.java": {
+      "bytes": 4698,
+      "sha256": "02114d538528df54d6d0727780811fcbcaff0152979b65a1562c491c8eb0f377"
+    },
+    "hardware-port/mount-gapps.sh": {
+      "bytes": 2000,
+      "sha256": "645e0f2bcb141c09cb2e1ea056de2a22491ecbc2165bbe5c62311a355eddfab0"
+    },
+    "hardware-port/patch-sensors.py": {
+      "bytes": 1890,
+      "sha256": "1a1166bcdfdf34d58ac7a9b4bc805c1d146c775a0259aa86b6ea02946fb71643"
+    },
+    "hardware-port/prepare-gapps.py": {
+      "bytes": 2516,
+      "sha256": "216a4041c2449761ebb747a312b206717926a28f233130ab2f13c0f9e48bde4d"
+    },
+    "hardware-status.txt": {
+      "bytes": 1138,
+      "sha256": "a15e91d66ada44e17b8a9b467f3f95be90f04b6bc33f91917eb2c044e5805776"
+    },
+    "host-fd-clean.c": {
+      "bytes": 210,
+      "sha256": "84f565dee5d47a67c7e1cbc7299018a011e590f12d33e26104984c7033f979c2"
+    },
+    "keymint-port/build-compat.py": {
+      "bytes": 411,
+      "sha256": "4b5c1748d5153d62206715d7510103684a90efc3341bea3e72e9f53789caef82"
+    },
+    "keymint-port/build.py": {
+      "bytes": 1515,
+      "sha256": "934b72fdea1a1d5af79c271a5eb4e5871ad9a072cbe651b17cc73702a3f390f5"
+    },
+    "keymint-port/compat-helper.c": {
+      "bytes": 1171,
+      "sha256": "ba107fe0420472df704459120bb434a8aef72127b17279f17ea12ec041a0a39f"
+    },
+    "keymint-port/fetch-gatekeeper-core.py": {
+      "bytes": 1569,
+      "sha256": "cb90de14ac055dbb0f665be8323d4008f33bcfaed377a8db17384238f56a65c9"
+    },
+    "keymint-port/fetch-gatekeeper-more.py": {
+      "bytes": 1817,
+      "sha256": "e5cb6f084d45b986154f4e00001988c76d347ef580a366590bdd905c8dc4b4b9"
+    },
+    "keymint-port/fetch-gatekeeper.py": {
+      "bytes": 960,
+      "sha256": "09ee9674d3c55f414cc5016466bea69e6b87735e5dedfb628994dc42b7a8ebd3"
+    },
+    "keymint-port/guest-auth.h": {
+      "bytes": 3269,
+      "sha256": "10fa23180b532dee9cf7fa2490411f84929a35a411bb1a94146a66d38806d7de"
+    },
+    "keymint-port/guest-gatekeeper.cpp": {
+      "bytes": 11265,
+      "sha256": "6b3f1a7921832a8470f40a7a020ac638d114ae8e3fc2c493ced76cb5aaf3c928"
+    },
+    "keymint-port/owned-key-bridge.c": {
+      "bytes": 21170,
+      "sha256": "77eb89ee611f64ef54c64c66c8c14d2367a676f50d00da5393a576e3d8385747"
+    },
+    "lifecycle-guard.sh": {
+      "bytes": 1285,
+      "sha256": "7597b6ab42d2d5125d68a191d0be6058fbc40a6d1d87826669d44df6d0e53e7c"
+    },
+    "namespace-v3.sh": {
+      "bytes": 4510,
+      "sha256": "d9d44eb4ff70ba03ef945d226b2c226f89bf3183a5dd0b81f44ad017b03a44c3"
+    },
+    "netd-launch.c": {
+      "bytes": 1564,
+      "sha256": "81fe9ce20d123ea4c4247a51f458305aeb35684445e7982d896aa5cfef201a26"
+    },
+    "network-port/bluetooth-bridge.c": {
+      "bytes": 1486,
+      "sha256": "cbaff31281a1cecf3f5787e146b89607cda4ce6e9619aeb2708083ec59990e1d"
+    },
+    "network-port/build-bluetooth.py": {
+      "bytes": 1460,
+      "sha256": "449ff5ed2e1408900bca5e2ae549bfea841cf5b3837bb6e491b7c362b88a459b"
+    },
+    "network-port/build-hardware.py": {
+      "bytes": 1459,
+      "sha256": "0bd2ea13af7c628f6f346f4c1944ccf365a627461f61222d260c1faf6903dfc6"
+    },
+    "network-port/build-network.py": {
+      "bytes": 1458,
+      "sha256": "44f1a2c1df43bedad2feb4bb7c9de8fedd7dc0f0814cf322ba6ee4419e79dac9"
+    },
+    "network-port/fetch-deps.py": {
+      "bytes": 1224,
+      "sha256": "154e162396ab6d39f00a5c9404936aeb4e7656f7b81007782319979fe89083cf"
+    },
+    "network-port/guest-uid-network.c": {
+      "bytes": 8523,
+      "sha256": "803c553151f0d74f336b3dd86f1a4ed532b63718a9e616f4c4e613aa681936ad"
+    },
+    "network-port/hardware-bridge.c": {
+      "bytes": 1886,
+      "sha256": "3054ebec383045c7f1204723676b3a7f3e3f04dd7d7001cb4b9a6122ac53fdd6"
+    },
+    "network-port/network-bridge.c": {
+      "bytes": 2257,
+      "sha256": "a11b3cece741a56429c7217e42045f317fcadddad4312282fe420bf3d78f460b"
+    },
+    "patch-guest-compat.py": {
+      "bytes": 1390,
+      "sha256": "1b3f7c417502b38fa5b350baae3ed795d1d7d404ae7ecd74b449ec50470fd51d"
+    },
+    "recover-v3.sh": {
+      "bytes": 3631,
+      "sha256": "3494f6b994f5663d354e2fb9a3a665cdf892f2ef888ddd0b4c43015e12115000"
+    },
+    "start-namespace.sh": {
+      "bytes": 823,
+      "sha256": "3edca145e225e5bc5ac346667768fbaaa67f7b46305c60c1ff1c58606a3220e1"
+    },
+    "start-v3.sh": {
+      "bytes": 1869,
+      "sha256": "70fb97b4652a5f74957748eb14fa2570047ac1013c5ef3431def993748fa250f"
+    },
+    "system-preflight-v3.sh": {
+      "bytes": 39710,
+      "sha256": "4805093ba55214a54c320784f17f3425baf291eac2821e35d10c30b090253669"
+    },
+    "tools/verify-source.py": {
+      "bytes": 2975,
+      "sha256": "5cfdedb38b6e85c438bf098521fa821f212ed4ee7f1c422f99519d6a3dc1b2f1"
+    },
+    "worker-v3.sh": {
+      "bytes": 316,
+      "sha256": "6431160b39002c73bc1ea9a9eb05f0ad3bf2ca7b3c2bad5aa0579bd6ee2b5038"
+    },
+    "zygote-launch.c": {
+      "bytes": 2813,
+      "sha256": "34d9907f5c26ed6870b5479d695619310078955cfa0f924c084763f7700f1dee"
+    }
+  }
+}

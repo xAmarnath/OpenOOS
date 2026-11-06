@@ -1,0 +1,437 @@
+{
+  "description": "Current local runtime reference. Hashes identify files; they do not grant redistribution rights.",
+  "files": [
+    {
+      "path": "binder-device",
+      "remote_name": "binder-device",
+      "bytes": 2139400,
+      "sha256": "dfde7ad60d83e6552216a466183b47a36945db1ebd3ed62abdf7bdd6d8944429",
+      "included_source": false,
+      "old_bundle": "unchanged"
+    },
+    {
+      "path": "network-port/bluetooth-bridge",
+      "remote_name": "bluetooth-bridge",
+      "bytes": 2446624,
+      "sha256": "24fdd420600e987ba1bf5f67650905440b0cfe8a3639c9f87d299f569e613893",
+      "included_source": false,
+      "old_bundle": "unchanged"
+    },
+    {
+      "path": "compile-framework-policy.sh",
+      "remote_name": "compile-framework-policy.sh",
+      "bytes": 295,
+      "sha256": "ee15bc9b303910d609488eb3de43942a12b129efaf227ef864cda22ffb81105b",
+      "included_source": true,
+      "old_bundle": "unchanged"
+    },
+    {
+      "path": "framework.rules",
+      "remote_name": "framework.rules",
+      "bytes": 2617,
+      "sha256": "bc8d789f74d3f2e533460f7eeecc5c6bdfb39f9cebc59f825fdbb4ea4433bec3",
+      "included_source": true,
+      "old_bundle": "changed"
+    },
+    {
+      "path": "hardware-port/guest-brightness.jar",
+      "remote_name": "guest-brightness.jar",
+      "bytes": 2252,
+      "sha256": "b486ac00fafe77988d43087929f89c17b78d32330a50b6f8d9a715a5e80186bd",
+      "included_source": false,
+      "old_bundle": "unchanged"
+    },
+    {
+      "path": "hardware-port/guest-data-prepare.jar",
+      "remote_name": "guest-data-prepare.jar",
+      "bytes": 2524,
+      "sha256": "9517b69196e2dfa8332e70023b0b2ddcd4b997ee29614da6d27f479363fc4a92",
+      "included_source": false,
+      "old_bundle": "unchanged"
+    },
+    {
+      "path": "hardware-port/guest-gapps-permissions.xml",
+      "remote_name": "guest-gapps-permissions.xml",
+      "bytes": 12995,
+      "sha256": "427d60a7a8d029fd04893bcacec830f3333aab642626a1ff64d150b81109a03a",
+      "included_source": false,
+      "old_bundle": "unchanged"
+    },
+    {
+      "path": "keymint-port/guest-gatekeeper",
+      "remote_name": "guest-gatekeeper",
+      "bytes": 24902960,
+      "sha256": "150ff99ebafb36c965c67a928c523ac48ca092222e4dcc82cbea8b77d37afeab",
+      "included_source": false,
+      "old_bundle": "missing"
+    },
+    {
+      "path": "hardware-port/guest-hardware.sh",
+      "remote_name": "guest-hardware.sh",
+      "bytes": 977,
+      "sha256": "fbe0bf02f59dcc4db6f528f067baaff60eee5564fa0b776bb050b1905be10534",
+      "included_source": true,
+      "old_bundle": "unchanged"
+    },
+    {
+      "path": "user-tests/guest-home-overlay.jar",
+      "remote_name": "guest-home-overlay.jar",
+      "bytes": 2385,
+      "sha256": "166d0fd03da3571d3b4b8c21f8b1c867c1516f11bbab59ea562a4fd8987e3c10",
+      "included_source": false,
+      "old_bundle": "unchanged"
+    },
+    {
+      "path": "guest-home-overlay.sh",
+      "remote_name": "guest-home-overlay.sh",
+      "bytes": 585,
+      "sha256": "b77574ad99358753f06f5ff5b3c4bb4cad79e4bb77f04045b812db33e58f4221",
+      "included_source": true,
+      "old_bundle": "unchanged"
+    },
+    {
+      "path": "user-tests/guest-input-fix.jar",
+      "remote_name": "guest-input-fix.jar",
+      "bytes": 1554,
+      "sha256": "70d631a68bc5bca01dffbf4b0309f7673869a43849459ba897eac5ef0520f2db",
+      "included_source": false,
+      "old_bundle": "unchanged"
+    },
+    {
+      "path": "guest-keystore-launch",
+      "remote_name": "guest-keystore-launch",
+      "bytes": 1065112,
+      "sha256": "0ef5a7f033a6dc0260a0eb6197ecacf3ad55c056da18a75a1448a987a450c26a",
+      "included_source": false,
+      "old_bundle": "missing"
+    },
+    {
+      "path": "guest-manifest_kera.xml",
+      "remote_name": "guest-manifest_kera.xml",
+      "bytes": 2188,
+      "sha256": "85b933e8d1ab9a4c99163b4eb252e76cc68a42628657abc3b0e482dfbd67fb2c",
+      "included_source": false,
+      "old_bundle": "unchanged"
+    },
+    {
+      "path": "guest-manifest_sun.xml",
+      "remote_name": "guest-manifest_sun.xml",
+      "bytes": 2461,
+      "sha256": "1e1e20d6a5ac36586ab8cb71250a5840e4d4970d87d8280ec1fcbd70ee42896e",
+      "included_source": false,
+      "old_bundle": "unchanged"
+    },
+    {
+      "path": "guest-manifest_tuna.xml",
+      "remote_name": "guest-manifest_tuna.xml",
+      "bytes": 2188,
+      "sha256": "85b933e8d1ab9a4c99163b4eb252e76cc68a42628657abc3b0e482dfbd67fb2c",
+      "included_source": false,
+      "old_bundle": "unchanged"
+    },
+    {
+      "path": "guest-noop",
+      "remote_name": "guest-noop",
+      "bytes": 2139160,
+      "sha256": "78f36e943758b521c4bdf42235bdbdedfca87d998c43c9c39487df2368dc0495",
+      "included_source": false,
+      "old_bundle": "unchanged"
+    },
+    {
+      "path": "guest-props",
+      "remote_name": "guest-props",
+      "bytes": 1141240,
+      "sha256": "da01a508332e1e33fbd6cca62bb07cb23589e2fb6d6ce32a6b7f2073afdb8adb",
+      "included_source": false,
+      "old_bundle": "unchanged"
+    },
+    {
+      "path": "guest-remount-ro",
+      "remote_name": "guest-remount-ro",
+      "bytes": 2150496,
+      "sha256": "c62aa9d40401c7bb200067f049284e07db63e40e1b1203c7384b5ceb00d458db",
+      "included_source": false,
+      "old_bundle": "unchanged"
+    },
+    {
+      "path": "guest-root",
+      "remote_name": "guest-root",
+      "bytes": 1184032,
+      "sha256": "44c2c585a1762c986095d75ed73a9e0057b01f968545dd6b0211eb48dfc6f0d5",
+      "included_source": false,
+      "old_bundle": "changed"
+    },
+    {
+      "path": "guest-service-launch",
+      "remote_name": "guest-service-launch",
+      "bytes": 1064824,
+      "sha256": "5b432bb54af5b7958990674ee89d522cb78c24a4bd51bb6236cddba0cab8fd44",
+      "included_source": false,
+      "old_bundle": "unchanged"
+    },
+    {
+      "path": "guest-storage-layout.sh",
+      "remote_name": "guest-storage-layout.sh",
+      "bytes": 1473,
+      "sha256": "67d500292418a3d0efaf70efc8136cdd583e1beab69453161bfdb8d1519d9931",
+      "included_source": true,
+      "old_bundle": "unchanged"
+    },
+    {
+      "path": "guest-supervisor",
+      "remote_name": "guest-supervisor",
+      "bytes": 1149288,
+      "sha256": "fdf7d4ee61d2b3693d84a87ec912796b7f2037a67c27b9f33eada2d05260fdf6",
+      "included_source": false,
+      "old_bundle": "unchanged"
+    },
+    {
+      "path": "guest-ui-config.sh",
+      "remote_name": "guest-ui-config.sh",
+      "bytes": 2852,
+      "sha256": "797e0333d0239c0bb4340648cfb91a36fb7af91459a0115ca2a531a04d7d5445",
+      "included_source": true,
+      "old_bundle": "changed"
+    },
+    {
+      "path": "network-port/guest-uid-network",
+      "remote_name": "guest-uid-network",
+      "bytes": 1199296,
+      "sha256": "4c4bab560fa9d3c07ab10cde88061411a970e713f5555fc6f059efb3bacac215",
+      "included_source": false,
+      "old_bundle": "missing"
+    },
+    {
+      "path": "hardware-port/halo-daemon.jar",
+      "remote_name": "halo-daemon.jar",
+      "bytes": 5868,
+      "sha256": "c5a4058dfb1033193c43f658e5ce80360bf6b94e5afe8b8a8580e294e0f8de27",
+      "included_source": false,
+      "old_bundle": "unchanged"
+    },
+    {
+      "path": "network-port/hardware-bridge",
+      "remote_name": "hardware-bridge",
+      "bytes": 2447136,
+      "sha256": "1d51477a9e4ab18e8e1953a1e8095a2ef0649ba83db50a63fcc477665a13635c",
+      "included_source": false,
+      "old_bundle": "unchanged"
+    },
+    {
+      "path": "host-fd-clean",
+      "remote_name": "host-fd-clean",
+      "bytes": 18464,
+      "sha256": "3317fc9bc83ead856917d375dc94f694162ddd01ceb6cda2c62092bdc050087f",
+      "included_source": false,
+      "old_bundle": "unchanged"
+    },
+    {
+      "path": "libboot_control_client17-guest.so",
+      "remote_name": "libboot_control_client17-guest.so",
+      "bytes": 68888,
+      "sha256": "f369b47e2fb4c0734ad8f5151e89519fabc64268063a99352f764818b8f80dd0",
+      "included_source": false,
+      "old_bundle": "unchanged"
+    },
+    {
+      "path": "hardware-port/libcamera-binder-pool.so",
+      "remote_name": "libcamera-binder-pool.so",
+      "bytes": 5912,
+      "sha256": "51d7d2abb83dfb9a2d7900d33de1c8a95a27777c155556bdb28c2eeae9f4c28c",
+      "included_source": false,
+      "old_bundle": "unchanged"
+    },
+    {
+      "path": "keymint-port/libguest-compat.so",
+      "remote_name": "libguest-compat.so",
+      "bytes": 6512,
+      "sha256": "8ad64c55a0e92d6dfde4da1a6b7cbd55d7a36c8e1fe24b0e832103a7e411734b",
+      "included_source": false,
+      "old_bundle": "missing"
+    },
+    {
+      "path": "libkm_compat-guest.so",
+      "remote_name": "libkm_compat-guest.so",
+      "bytes": 226240,
+      "sha256": "9ac32eac909725c85ae5ccd8ac4c5511205aeaca4481a14bc1bef2d6ff5fcdfd",
+      "included_source": false,
+      "old_bundle": "unchanged"
+    },
+    {
+      "path": "libmeminfo17-guest.so",
+      "remote_name": "libmeminfo17-guest.so",
+      "bytes": 203280,
+      "sha256": "6ee2176f58384f3f3c4a160008cca68ebd938d08f0fefb1f6fce8763cfcf2b57",
+      "included_source": false,
+      "old_bundle": "unchanged"
+    },
+    {
+      "path": "libnetd_updatable17-guest.so",
+      "remote_name": "libnetd_updatable17-guest.so",
+      "bytes": 102960,
+      "sha256": "e1f391a4e76960aedcbee2fd43d5c66321f7c736d99454cc483e2666e5d3f1c9",
+      "included_source": false,
+      "old_bundle": "unchanged"
+    },
+    {
+      "path": "hardware-port/libsensorservice-vivo.so",
+      "remote_name": "libsensorservice-vivo.so",
+      "bytes": 690976,
+      "sha256": "0a50bcc9d3991c437e61e0d25f0972ff2f169ae7f137b368b954a8a589e1ecd7",
+      "included_source": false,
+      "old_bundle": "unchanged"
+    },
+    {
+      "path": "hardware-port/libsensorserviceaidl-vivo.so",
+      "remote_name": "libsensorserviceaidl-vivo.so",
+      "bytes": 85368,
+      "sha256": "ef387bece7047a46564d1887f361d3a42f5883b1cbf933264bf1c728e45ab609",
+      "included_source": false,
+      "old_bundle": "unchanged"
+    },
+    {
+      "path": "lifecycle-guard.sh",
+      "remote_name": "lifecycle-guard.sh",
+      "bytes": 1285,
+      "sha256": "7597b6ab42d2d5125d68a191d0be6058fbc40a6d1d87826669d44df6d0e53e7c",
+      "included_source": true,
+      "old_bundle": "unchanged"
+    },
+    {
+      "path": "magiskpolicy",
+      "remote_name": "magiskpolicy",
+      "bytes": 356216,
+      "sha256": "83725b7c452c1d441acd851daaf1dffd15ef06d7b8dabac8a1215801d2b40796",
+      "included_source": false,
+      "old_bundle": "unchanged"
+    },
+    {
+      "path": "hardware-port/mount-gapps.sh",
+      "remote_name": "mount-gapps.sh",
+      "bytes": 2000,
+      "sha256": "645e0f2bcb141c09cb2e1ea056de2a22491ecbc2165bbe5c62311a355eddfab0",
+      "included_source": true,
+      "old_bundle": "unchanged"
+    },
+    {
+      "path": "namespace-v3.sh",
+      "remote_name": "namespace-v3.sh",
+      "bytes": 4510,
+      "sha256": "d9d44eb4ff70ba03ef945d226b2c226f89bf3183a5dd0b81f44ad017b03a44c3",
+      "included_source": true,
+      "old_bundle": "changed"
+    },
+    {
+      "path": "netbpfload17-guest",
+      "remote_name": "netbpfload17-guest",
+      "bytes": 102208,
+      "sha256": "e08d2af494fefd1b79c2311c6080faf38113665c3639a907de9b99d021c4ac92",
+      "included_source": false,
+      "old_bundle": "unchanged"
+    },
+    {
+      "path": "netd-launch",
+      "remote_name": "netd-launch",
+      "bytes": 1061992,
+      "sha256": "4a4f5532bacb03ce6c43e4e1a98ce5a0e2351c3f6c8e9e4efcd33b27bb634748",
+      "included_source": false,
+      "old_bundle": "unchanged"
+    },
+    {
+      "path": "network-port/network-bridge",
+      "remote_name": "network-bridge",
+      "bytes": 2447168,
+      "sha256": "ef5c6581949c36f31d635695e4ffdc80d6398dc716c492ab865893a6453f9945",
+      "included_source": false,
+      "old_bundle": "unchanged"
+    },
+    {
+      "path": "keymint-port/owned-key-bridge",
+      "remote_name": "owned-key-bridge",
+      "bytes": 9175920,
+      "sha256": "4cb3e4c9fe179aa3963831e4b7d8cd7f3bf0bc70edfea29d50046294ca7ed773",
+      "included_source": false,
+      "old_bundle": "missing"
+    },
+    {
+      "path": "hardware-port/privapp-permissions-google-product.xml",
+      "remote_name": "privapp-permissions-google-product.xml",
+      "bytes": 37360,
+      "sha256": "05e191ee4eacc5c659ee24af226fcdbd9789f00824e8b1cdf277f34207db9698",
+      "included_source": false,
+      "old_bundle": "unchanged"
+    },
+    {
+      "path": "hardware-port/privapp-permissions-google-system.xml",
+      "remote_name": "privapp-permissions-google-system.xml",
+      "bytes": 1349,
+      "sha256": "8d79778365b5848c8784413ad3d601b38de03af8b0f5d558eee28f9eabdeea4c",
+      "included_source": false,
+      "old_bundle": "unchanged"
+    },
+    {
+      "path": "hardware-port/privapp-permissions-google-system_ext.xml",
+      "remote_name": "privapp-permissions-google-system_ext.xml",
+      "bytes": 4575,
+      "sha256": "a40a67e3fca771c2bab4e54faa1c19c7c68b56f927bf0f9cd9460a8ae797c80d",
+      "included_source": false,
+      "old_bundle": "unchanged"
+    },
+    {
+      "path": "recover-v3.sh",
+      "remote_name": "recover-v3.sh",
+      "bytes": 3631,
+      "sha256": "3494f6b994f5663d354e2fb9a3a665cdf892f2ef888ddd0b4c43015e12115000",
+      "included_source": true,
+      "old_bundle": "changed"
+    },
+    {
+      "path": "start-namespace.sh",
+      "remote_name": "start-namespace.sh",
+      "bytes": 823,
+      "sha256": "3edca145e225e5bc5ac346667768fbaaa67f7b46305c60c1ff1c58606a3220e1",
+      "included_source": true,
+      "old_bundle": "unchanged"
+    },
+    {
+      "path": "start-v3.sh",
+      "remote_name": "start-v3.sh",
+      "bytes": 1869,
+      "sha256": "70fb97b4652a5f74957748eb14fa2570047ac1013c5ef3431def993748fa250f",
+      "included_source": true,
+      "old_bundle": "unchanged"
+    },
+    {
+      "path": "system-preflight-v3.sh",
+      "remote_name": "system-preflight-v3.sh",
+      "bytes": 39710,
+      "sha256": "4805093ba55214a54c320784f17f3425baf291eac2821e35d10c30b090253669",
+      "included_source": true,
+      "old_bundle": "changed"
+    },
+    {
+      "path": "hardware-port/vivo-services.jar",
+      "remote_name": "vivo-services-stock.jar",
+      "bytes": 20453220,
+      "sha256": "8b3142ca0110db8e9ce640c4d9e3d020f15a7730f151cb63f82d0127c2c47bba",
+      "included_source": false,
+      "old_bundle": "unchanged"
+    },
+    {
+      "path": "worker-v3.sh",
+      "remote_name": "worker-v3.sh",
+      "bytes": 316,
+      "sha256": "6431160b39002c73bc1ea9a9eb05f0ad3bf2ca7b3c2bad5aa0579bd6ee2b5038",
+      "included_source": true,
+      "old_bundle": "unchanged"
+    },
+    {
+      "path": "zygote-launch",
+      "remote_name": "zygote-launch",
+      "bytes": 709776,
+      "sha256": "793fc061088ec632c8bc9c22821e68824d372c66c9f4ca6068eb6869e518a6b7",
+      "included_source": false,
+      "old_bundle": "unchanged"
+    }
+  ]
+}

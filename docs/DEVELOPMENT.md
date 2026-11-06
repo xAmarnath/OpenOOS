@@ -1,0 +1,80 @@
+# Development snapshot
+
+## What is available
+
+The repository contains selected current controller scripts, native helper
+sources, Binder bridges, credential service source, hardware helpers, and the
+Monster Halo guest app source. Historical logs, downloaded source trees,
+toolchains, APKs, signing keys, images, and session artifacts are excluded.
+
+This snapshot preserves the current experimental implementation. There is no
+complete, verified build-from-scratch pipeline yet. The existing scripts below
+are components of that workflow, not a claim that these commands alone recreate
+the entire runnable setup.
+
+## Toolchain and dependencies
+
+- Windows Python 3.10+ and Android Platform Tools for the controller.
+- Zig 0.13.0 at `toolchain/zig-windows-x86_64-0.13.0/zig.exe` for existing native build scripts.
+- JDK plus Android SDK platform `android-37.0` and build-tools `37.0.0` for Java helpers and Halo.
+  Set `ANDROID_SDK_ROOT`; the published scripts do not contain a personal SDK path.
+- `libgbinder`, `libglibutil`, and an Alpine aarch64 development sysroot under `network-port/`.
+  Fetch scripts also expect `network-port/APKINDEX` from Alpine v3.22.
+- AOSP Gatekeeper headers/core source and OpenSSL development libraries for the guest verifier.
+- `pyelftools` and `capstone` for the sensor patch script.
+- The exact GSI/stock input libraries for binary compatibility patches.
+
+Some historical fetch scripts follow upstream `main`/`master` and some dependency
+preparation steps are still manual. Pinning source revisions, checksums, extraction,
+and complete build recipes is pending. Do not treat the runtime reference hashes
+as hashes of downloadable source dependencies.
+
+## Existing component builds
+
+Run from the repository root, after preparing the relevant dependencies:
+
+```powershell
+python network-port/build-network.py
+python network-port/build-hardware.py
+python network-port/build-bluetooth.py
+python keymint-port/build.py owned-key-bridge
+python keymint-port/build.py guest-gatekeeper
+python keymint-port/build-compat.py
+python hardware-port/build-java.py hardware-port/GuestBrightness.java hardware-port/guest-brightness.jar
+python hardware-port/build-java.py hardware-port/GuestDataPrepare.java hardware-port/guest-data-prepare.jar
+python hardware-port/build-java.py hardware-port/HaloDaemon.java hardware-port/halo-daemon.jar
+python hardware-port/halo/build.py
+```
+
+Halo's script generates a local development signing key. Keep it private; it is
+not a production signing scheme. Original binaries and build products stay out
+of Git. The controller maps local runtime paths to device names in `gsi.py:RUNTIME`.
+The [runtime inventory](runtime-inventory.json) covers 54 current runtime inputs;
+several require external files or additional build recipes.
+
+## Recent changes preserved in this source
+
+- Close inherited descriptors before guest launch. The display investigation
+  found descriptor values beyond the driver's accepted input-fence range.
+- Restrict shared-mount propagation to the guest's own `/mnt` tree so shared
+  storage mounts can reach guest applications.
+- Prepare guest user data and labels and grow the offline userdata image to 32 GiB.
+- Track guest-created keys and run a separate guest credential verifier.
+- Encode absent KeyMint application ID/data as empty AIDL byte vectors instead
+  of null. This latest change still needs end-to-end owner testing.
+
+Hardware-backed operations and software guest authentication paths coexist in
+the current bridge. Its presence must not be described as complete hardware
+credential support or successful device attestation. Google login remains open.
+
+## Local source check
+
+```powershell
+python tools/verify-source.py
+```
+
+The checker verifies the published file allowlist, hashes, text formats, Python
+syntax, and optional shell syntax when Bash is installed. It does not connect to
+the phone, execute imported controller modules, build native code, or verify a
+guest boot. When editing source, update `source-manifest.json` after reviewing
+the intended changes.
