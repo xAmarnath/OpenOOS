@@ -40,8 +40,6 @@ it does not contain OriginOS source code and is not affiliated with vivo or iQOO
 
 ## Screenshots
 
-Captured on the iQOO 13 running the Android 17 guest. Personal identifiers are masked.
-
 | About phone | Version info |
 | :---: | :---: |
 | [![About phone: I2401, Android 17, identifiers masked](docs/images/about-phone.png)](docs/images/about-phone.png) | [![Android 17 version, baseband, kernel, and build information](docs/images/android-version.png)](docs/images/android-version.png) |
@@ -70,11 +68,6 @@ or require a reboot. Runtime policy, services, network state, and brightness can
 change during a session. See [storage and recovery](docs/OPERATIONS.md).
 
 ## Feature status
-
-**✅ Verified for the behavior listed · ❌ Known failure without a confirmed fix · ⬜ Unverified**
-
-Results are scoped to development tests on the target device. A check mark does
-not imply that every use case or the latest build has passed a full regression test.
 
 | Feature | Status | Tested behavior / remaining work |
 | :--- | :---: | :--- |
